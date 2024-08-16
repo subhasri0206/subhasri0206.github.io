@@ -1,0 +1,298 @@
+/* Import Google Fonts for different text styles */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+:root {
+    --recipe-title-color: #312E2C;
+    --prep-heading: #7A284E;
+    --text: #5F564D;
+    --heading: #854632;
+}
+
+/* Apply box-sizing, margin, and padding resets to all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the background color for the body */
+body {
+    background-color: #F3E5D7;
+}
+
+/* Style the recipe card container */
+.recipe-card {
+    max-width: 736px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+/* Style the image section within the recipe card */
+.recipe-card-image {
+    padding: 40px 40px 0px 40px;
+}
+
+/* Style the content section within the recipe card */
+.recipe-card-content {
+    padding: 0px 40px 40px 40px;
+}
+
+/* Style the recipe image */
+.recipe-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+/* Style the recipe title */
+.recipe-title {
+    font-family: Young Serif;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: left;
+    color: var(--recipe-title-color);
+    margin-bottom: 24px;
+}
+
+/* Style the recipe description */
+.recipe-description {
+    font-size: 16px;
+    font-family: Outfit;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: var(--text);
+}
+
+/* Remove list styles from unordered and ordered lists */
+ul,
+ol {
+    list-style-type: none;
+}
+
+/* Style the preparation time section */
+.prep-time {
+    background-color: #FFF7FB;
+    padding: 10px;
+    margin-top: 32px;
+    border-radius: 10px;
+    margin-bottom: 32px;
+}
+
+/* Style the preparation time heading */
+.prep-time h2 {
+    font-family: Outfit;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    color: var(--prep-heading);
+    padding: 15px;
+}
+
+/* Style the list items within the preparation time section */
+.prep-time li {
+    font-family: Outfit;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    color: var(--text);
+    margin-bottom: 8px;
+    margin-left: 30px;
+}
+
+/* Add a bullet point before each list item in preparation time */
+.prep-time li::before {
+    content: "•";
+    color: var(--prep-heading);
+    width: 4px;
+    height: 4px;
+    margin-left: -8px;
+    margin-right: 16px;
+}
+
+/* Style the span elements within the list items in preparation time */
+.prep-time span {
+    font-family: Outfit;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+/* Style the ingredients heading */
+.ingredients h2 {
+    font-family: Young Serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    color: var(--heading);
+    margin-bottom: 24px;
+}
+
+/* Style the list items within the ingredients section */
+.ingredients li {
+    font-family: Outfit;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: var(--text);
+    margin-left: 18px;
+    margin-bottom: 8px;
+}
+
+/* Add a bullet point before each list item in ingredients */
+.ingredients li::before {
+    content: "•";
+    color: var(--heading);
+    width: 4px;
+    height: 4px;
+    margin-left: -8px;
+    margin-right: 16px;
+}
+
+/* Style the horizontal line (hr) */
+hr {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border: 1px solid #E3DDD7;
+}
+
+/* Style the instructions heading */
+.instructions h2 {
+    font-family: Young Serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    color: var(--heading);
+    margin-bottom: 24px;
+}
+
+/* Style the list items within the instructions section */
+.instructions li {
+    font-family: Outfit;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    color: var(--text);
+    margin-left: 18px;
+    margin-bottom: 8px;
+    counter-increment: instruction-counter;
+}
+
+/* Add numbering before each list item in instructions */
+.instructions li::before {
+    content: counter(instruction-counter) ".";
+    color: var(--heading);
+    width: 4px;
+    height: 4px;
+    margin-left: -8px;
+    margin-right: 16px;
+}
+
+/* Style the span elements within the list items in instructions */
+.instructions span {
+    font-family: Outfit;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+/* Style the nutrition heading */
+.nutrition h2 {
+    font-family: Young Serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    color: var(--heading);
+    margin-bottom: 24px;
+}
+
+/* Style the paragraph text within the nutrition section */
+.nutrition p {
+    font-family: Outfit;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: var(--text);
+    margin-bottom: 24px;
+}
+
+/* Style the nutrition table */
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style the table cells within the nutrition table */
+.nutrition-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
+}
+
+/* Style the nutrition name within the table */
+.nutrition-name {
+    font-family: Outfit;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: var(--text);
+}
+
+/* Style the nutrition amount within the table */
+.nutrition-amount {
+    font-family: Outfit;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    color: var(--heading);
+}
+
+/* Responsive design for small devices */
+@media (max-width: 768px) {
+
+    body {
+        background-color: #fff;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .recipe-card {
+        max-width: 100%;
+        margin: 0px;
+        border-radius: none;
+    }
+
+    .recipe-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+        border-radius: none;
+    }
+
+    .recipe-card-image {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .recipe-card-content {
+        padding: 0px 30px 30px 30px;
+    }
+
+    .nutrition-table tr:last-child td {
+        border-bottom: none;
+    }
+}
