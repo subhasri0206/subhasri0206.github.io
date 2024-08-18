@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --bg-color: #2c2c2e;
+    --color: #F1F1F1;
+}
+
+/* Body styles */
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the main content */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main title styles */
+.main-title {
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 275;
+    line-height: 54px;
+    letter-spacing: 0.25px;
+    text-align: center;
+    margin: 80px 0px 0px 0px;
+    color: var(--color);
+}
+
+/* Subtitle styles */
+.sub-title {
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: 0.25px;
+    text-align: center;
+    margin: 0px;
+    color: var(--color);
+}
+
+/* Description text styles */
+.description {
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    color: var(--color);
+    opacity: 50%;
+    margin-top: 16px;
+    margin-bottom: 64px;
+    width: 540px;
+}
+
+/* Container for the tool cards */
+.tool-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 30px;
+}
+
+/* First column layout */
+.column1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Second column layout */
+.column2 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Third column layout */
+.column3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tool card styles */
+.tool-card {
+    background-color: var(--bg-color);
+    width: 350px;
+    height: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Tool title styles */
+.tool-title {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: left;
+    color: #ffffff;
+    margin: 32px 0px 6px 32px;
+}
+
+/* Tool description styles */
+.tool-description {
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.09px;
+    text-align: left;
+    color: var(--color);
+    opacity: 50%;
+    margin: 0px 32px 40px 32px;
+}
+
+/* Tool icon styles */
+.tool-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0px 32px 32px 254px;
+}
+
+/* Styles for the supervisor card */
+.supervisor {
+    border-top: 4px solid #44D3D2;
+    box-shadow: 0px 15px 30px -11px #44D3D280;
+}
+
+/* Styles for the team-builder card */
+.team-builder {
+    border-top: 4px solid #EA5454;
+    box-shadow: 0px 15px 30px -11px #EA545480;
+    margin-bottom: 30px;
+}
+
+/* Styles for the karma card */
+.karma {
+    border-top: 4px solid #FCAE4A;
+    box-shadow: 0px 15px 30px -11px #FCAE4A80;
+}
+
+/* Styles for the calculator card */
+.calculator {
+    border-top: 4px solid #549EF2;
+    box-shadow: 0px 15px 30px -11px #549EF280;
+}
+
+/* Media query for small screens */
+@media (max-width: 575px) {
+    body {
+        height: auto;
+    }
+
+    .main-title {
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.17px;
+        margin: 85px 39px 0px 39px;
+    }
+
+    .sub-title {
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.17px;
+    }
+
+    .description {
+        margin: 16px 32px 76px 32px;
+        width: 311px;
+    }
+
+    .tool-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0px 32px 32px 32px;
+        gap: 25px;
+    }
+}
