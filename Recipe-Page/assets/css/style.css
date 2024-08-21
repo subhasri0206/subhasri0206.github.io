@@ -24,9 +24,9 @@ body {
 /* Style the recipe card container */
 .recipe-card {
     max-width: 736px;
-    margin: 40px auto;
+    margin: 128px auto 128px auto;
     background-color: #ffffff;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 /* Style the image section within the recipe card */
@@ -260,6 +260,10 @@ hr {
     line-height: 24px;
     text-align: left;
     color: var(--heading);
+}
+
+.nutrition-table tr:last-child td {
+    border-bottom: none;
 }
 
 /* Responsive design for small devices */
