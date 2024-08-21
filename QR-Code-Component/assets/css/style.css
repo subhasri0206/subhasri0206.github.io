@@ -27,8 +27,8 @@ body {
 
 /* Styling for the card container */
 .card {
-    width: 320px;
-    height: 500px;
+    width: auto;
+    height: auto;
     background-color: var(--card-bg-color);
     border-radius: 20px;
     box-shadow: 0px 17px 25px 0px #00000028;
@@ -37,20 +37,21 @@ body {
 }
 
 /* Styling for the QR code image */
-.card_qr_image {
+.card-qr-image {
     width: 288px;
     height: 288px;
     border-radius: 10px;
 }
 
 /* Styling for the content section within the card */
-.card_content {
+.card-content {
     margin-top: 24px;
     padding: 0px 16px 0px 16px;
+    width: 288px;
 }
 
 /* Styling for the card title */
-.card_title {
+.card-title {
     font-size: 20px;
     font-family: Outfit;
     font-weight: 700;
@@ -61,7 +62,7 @@ body {
 }
 
 /* Styling for the card description */
-.card_description {
+.card-description {
     font-size: 15px;
     font-family: Outfit;
     font-weight: 400;
