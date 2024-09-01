@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata about the webpage -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Get a complete understanding of HTML tags with this HTML CheatSheet"/>
+    <meta name="keywords" content="HTML, tags, web development, CheatSheet"/>
+    <title>HTML CheatSheet</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="script" href="assets/javascript/main.js"/>
+</head>
+<body>
+    <!-- Header section of the webpage -->
+    <div class="webpage-header">
+        <h1>HTML - CheatSheet</h1>
+        <img src="assets/images/html-logo.jpg" alt="HTML-Logo-Image" width="100px" height="100px"/>
+    </div>
+    <!-- Container for all the cards -->
+    <div class="card-container">
+        <!-- Card 1: HTML Introduction -->
+        <div class="card">
+            <h2>HTML Introduction</h2>
+            <ul>
+                <li><strong>HTML (HyperText Markup Language) </strong> is the standard language used to create web pages.</li>
+                <li>HTML is important because it tells your web browser (like Chrome, Firefox, or Safari) how to display the content on your webpage.</li>
+                <li>Every HTML document has a basic structure.</li>
+            </ul>
+            <label for="popup-html-intro" class="view-details-button">View Details</label>
+            <input type="checkbox" id="popup-html-intro" class="popup-checkbox"/>
+            <div class="popup">
+                <div class="popup-content">
+                    <label for="popup-html-intro" class="close-popup-button">&times;</label>
+                    <h3>Document Structure</h3>
+                    <img src="assets/images/html-structure.png" alt="HTML-Structure-Image" width="600px" height="500px">
+                </div>
+            </div>
+        </div>
+        <!-- Card 2: DOCTYPE Introduction -->
+        <div class="card">
+            <h2>DOCTYPE Introduction</h2>
+            <ul>
+                <li>HTML Doctype is declared at the beginning of HTML document to inform browsers about the document type and version, ensuring correct rendering.</li>
+                <li>They aren’t HTML tags but provide essential information.</li>
+                <li>A DOCTYPE declaration, appearing at the top of a web page, is required by HTML standards which ensures that browsers display the page as intended, adhering to the specified HTML version.</li>
+            </ul>
+            <label for="popup-doctype-intro" class="view-details-button">View Details</label>
+            <input type="checkbox" id="popup-doctype-intro" class="popup-checkbox"/>
+            <div class="popup">
+                <div class="popup-content">
+                    <label for="popup-doctype-intro" class="close-popup-button">&times;</label>
+                    <h3>DOCTYPE Declaration</h3>
+                    <p>Declares the document type and version of HTML. It helps the browser to render the page correctly.</p>
+                    <p><strong>Syntax: </strong>&lt;!DOCTYPE html&gt;</p>
+                    <p><strong>Example Code: </strong></p>
+                    <pre><code class="code-block">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            &lt;head&gt;
+                                &lt;title&gt;Doctype Example&lt;/title&gt;
+                            &lt;/head&gt;
+                            &lt; body &gt;
+                                &lt;p&gt;Hello, World!&lt;/p&gt;
+                            &lt;/body&gt;
+                        &lt;/html&gt; 
+                    </code></pre>
+                    <p><strong>Rendered Output: </strong>The browser understands that this is an HTML5 document.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3: Anatomy of HTML -->
+        <div class="card">
+            <h2>Anatomy of HTML</h2>
+            <p>An HTML element typically consist of: </p>
+            <ul>
+                <li>Opening Tag - The opening tag tells the browser where the element begins. It's enclosed in angle brackets (< >).</li>
+                <li>Content - The content is the actual text or other HTML elements that the tag is wrapping around.</li>
+                <li>Closing Tag - The closing tag tells the browser where the element ends. It's also enclosed in angle brackets but has a forward slash (/) before the element name.</li>
+            </ul>
+            <label for="popup-anatomy" class="view-details-button">View Details</label>
+            <input type="checkbox" id="popup-anatomy" class="popup-checkbox"/>
+            <div class="popup">
+                <div class="popup-content">
+                    <label for="popup-anatomy" class="close-popup-button">&times;</label>
+                    <h3>Anatomy of an HTML Element</h3>
+                    <p><strong>Syntax: </strong>&lt;tagname&gt; content &lt;/tagname&gt;</p>
+                    <p><strong>Example Code: </strong></p>
+                    <pre><code class="code-block">
+                        &lt;p&gt;This is a paragraph.&lt;/p&gt;
+                    </code></pre>
+                    <p><strong>Rendered Output: </strong>This is a paragraph.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 4: Introduction to Head -->
+        <div class="card">
+            <h2>Introduction to Head</h2>
+            <ul>
+                <li>The head element in an HTML document contains meta-information about the webpage.</li>
+                <li>This information is not displayed on the webpage itself but is crucial for the browser and search engines to understand the page.</li>
+            </ul>
+            <label for="popup-head" class="view-details-button">View Details</label>
+            <input type="checkbox" id="popup-head" class="popup-checkbox" />
+            <div class="popup">
+                <div class="popup-content">
+                    <label for="popup-head" class="close-popup-button">&times;</label>
+                    <h3>Head Element</h3>
+                    <p><strong>Syntax: </strong> <br> &lt;head&gt; <br>...<br> &lt;/head&gt;</p>
+                    <a href="head.html" class="navigate-link" target="_blank">Discover HTML head elements</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 5: Introduction to Body -->
+        <div class="card">
+            <h2>Introduction to Body</h2>
+            <ul>
+                <li>The body tag defines the document's body.</li>
+                <li>The body element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.</li>
+                <li>There can only be one body element in an HTML document.</li>
+            </ul>
+            <label for="popup-body" class="view-details-button">View Details</label>
+            <input type="checkbox" id="popup-body" class="popup-checkbox" />
+            <div class="popup">
+                <div class="popup-content">
+                    <label for="popup-body" class="close-popup-button">&times;</label>
+                    <h3>Body Element</h3>
+                    <p>Contains the content of the HTML document.</p>
+                    <p><strong>Syntax: </strong> <br> &lt;body&gt; <br>...<br> &lt;/body&gt;</p>
+                    <p><strong>Example Code: </strong></p>
+                    <pre><code class="code-block">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            &lt;head&gt;
+                                &lt;title&gt;Body Element Example&lt;/title&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                                &lt;p&gt;Hello, World!&lt;/p&gt;
+                            &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code></pre>
+                    <p><strong>Rendered Output: </strong>Displays the content within the body element.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 6: HTML Semantic Elements -->
+        <div class="card">
+            <h2>HTML Semantic Elements</h2>
+            <ul>
+                <li>Semantic HTML elements are used to provide meaning and structure to web content, making it easier for browsers, search engines, and developers to understand the document.</li>
+                <li>These elements describe the purpose of the content they enclose.</li>
+            </ul>
+            <label for="popup-semantic" class="view-details-button">View Details</label>
+            <input type="checkbox" id="popup-semantic" class="popup-checkbox" />
+            <div class="popup">
+                <div class="popup-content">
+                    <label for="popup-semantic" class="close-popup-button">&times;</label>
+                    <h3>HTML Semantic Elements</h3>
+                    <p>Elements that clearly describe their meaning.</p>
+                    <p><strong>Syntax: </strong> <br> &lt;element&gt; <br>...<br> &lt;/element&gt;</p>
+                    <a href="semantic.html" class="navigate-link" target="_blank">Discover HTML Semantic elements</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 7: Text Formatting-->
+        <div class="card">
+            <h2>Text Formatting</h2>
+            <ul>
+                <li>Various tags used to format text in HTML.</li>
+            </ul>
+            <label for="popup-text" class="view-details-button">View Details</label>
+            <input type="checkbox" id="popup-text" class="popup-checkbox" />
+            <div class="popup">
+                <div class="popup-content">
+                    <label for="popup-text" class="close-popup-button">&times;</label>
+                    <h3>Text Formatting</h3>
+                    <p>Various tags used to format text in HTML.</p>
+                    <a href="text.html" class="navigate-link" target="_blank">Discover HTML Text Formatting</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 8: Lists-->
+        <div class="card">
+            <h2>Lists</h2>
+            <ul>
+                <li>HTML lists allow web developers to group a set of related items in lists.</li>
+            </ul>
+            <label for="popup-list" class="view-details-button">View Details</label>
+            <input type="checkbox" id="popup-list" class="popup-checkbox" />
+            <div class="popup">
+                <div class="popup-content">
+                    <label for="popup-list" class="close-popup-button">&times;</label>
+                    <h3>HTML Lists</h3>
+                    <p>HTML lists are used to group related items.</p>
+                    <p><strong>Syntax: </strong>&lt;li&gt; ... &lt;/li&gt;</p>
+                    <a href="list.html" class="navigate-link" target="_blank">Discover HTML Lists</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 9: Tables-->
+        <div class="card">
+            <h2>Tables</h2>
+            <ul>
+                <li>HTML tables allow web developers to arrange data into rows and columns.</li>
+            </ul>
+            <label for="popup-table" class="view-details-button">View Details</label>
+            <input type="checkbox" id="popup-table" class="popup-checkbox" />
+            <div class="popup">
+                <div class="popup-content">
+                    <label for="popup-table" class="close-popup-button">&times;</label>
+                    <h3>HTML Tables</h3>
+                    <p>HTML tables are used to display tabular data.</p>
+                    <p><strong>Syntax: </strong>&lt;table&gt; ... &lt;/table&gt;</p>
+                    <a href="table.html" class="navigate-link" target="_blank">Discover HTML Tables</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 10: Forms-->
+        <div class="card">
+            <h2>Forms</h2>
+            <ul>
+                <li>An HTML form is used to collect user input.</li>
+            </ul>
+            <label for="popup-form" class="view-details-button">View Details</label>
+            <input type="checkbox" id="popup-form" class="popup-checkbox" />
+            <div class="popup">
+                <div class="popup-content">
+                    <label for="popup-form" class="close-popup-button">&times;</label>
+                    <h3>HTML Forms</h3>
+                    <p>HTML forms are used to collect user input.</p>
+                    <p><strong>Syntax: </strong></p>
+                    <pre><code class="code-block">
+                        &lt;form action="submit_url" method="post"&gt;
+                            &lt;input type="text" name="name"&gt;
+                        &lt;/form&gt;
+                    </code></pre>
+                    <p><strong>Example Code: </strong></p>
+                    <pre><code class="code-block">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            &lt;head&gt;
+                                &lt;title&gt;Form Example&lt;/title&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                                &lt;form action="/submit" method="post"&gt;
+                                    &lt;label for="name"&gt;Name:&lt;/label&gt;
+                                    &lt;input type="text" id="name" name="name"&gt;
+                                    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+                                &lt;/form&gt;
+                            &lt;/body&gt;
+                        &lt;/html&gt;                     
+                    </code></pre>
+                    <p><strong>Rendered Output: </strong>Form with a text input and submit button</p>
+                    <a href="form.html" class="navigate-link" target="_blank">Discover HTML Forms</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 11: Iframe-->
+        <div class="card">
+            <h2>Iframe</h2>
+            <ul>
+                <li>An HTML iframe is used to display a web page within a web page.</li>
+                <li>The HTML iframe tag specifies an inline frame.</li>
+                <li>An inline frame is used to embed another document within the current HTML document.</li>
+            </ul>
+            <label for="popup-iframe" class="view-details-button">View Details</label>
+            <input type="checkbox" id="popup-iframe" class="popup-checkbox" />
+            <div class="popup">
+                <div class="popup-content">
+                    <label for="popup-iframe" class="close-popup-button">&times;</label>
+                    <h3>HTML Iframe</h3>
+                    <p>Defines an inline frame.</p>
+                    <p><strong>Syntax: </strong>&lt;iframe src="url" width="" height=""&gt;&lt;/iframe&gt;</p>
+                    <p><strong>Example Code: </strong></p>
+                    <pre><code class="code-block">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            &lt;head&gt;
+                                &lt;title&gt;Iframe Example&lt;/title&gt;
+                            &lt;/head&gt;
+                            &lt;body&gt;
+                                &lt;iframe src="https://example.com" width="300" height="200"&gt;&lt;/iframe&gt;
+                            &lt;/body&gt;
+                        &lt;/html&gt;                                        
+                    </code></pre>
+                    <p><strong>Rendered Output: </strong>Inline frame displaying content from https://example.com</p>
+                </div>
+            </div>
+        </div>
+        <!-- Card 12: Global Attributes-->
+        <div class="card">
+            <h2>Global Attributes</h2>
+            <ul>
+                <li>Attributes are like extra information added to HTML elements to give them more power and functionality.</li>
+                <li>They appear in the opening tag and provide details about the element.</li>
+                <li>Global Attributes can be used with any HTML element</li>
+            </ul>
+            <label for="popup-globalattr" class="view-details-button">View Details</label>
+            <input type="checkbox" id="popup-globalattr" class="popup-checkbox" />
+            <div class="popup">
+                <div class="popup-content">
+                    <label for="popup-globalattr" class="close-popup-button">&times;</label>
+                    <h3>Global Attributes</h3>
+                    <p>Common attributes that can be applied to any HTML element.</p>
+                    <p><strong>Syntax: </strong>&lt;element global-attribute="value"&gt;&lt;/element&gt;</p>
+                    <a href="globalattr.html" class="navigate-link" target="_blank">Discover HTML Global Attributes</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 13: Specific Attributes-->
+        <div class="card">
+            <h2>Specific Attributes</h2>
+            <ul>
+                <li>Attributes are like extra information added to HTML elements to give them more power and functionality.</li>
+                <li>They appear in the opening tag and provide details about the element.</li>
+                <li>Specific Attributes can only apply to certain elements</li>
+            </ul>
+            <label for="popup-specificattr" class="view-details-button">View Details</label>
+            <input type="checkbox" id="popup-specificattr" class="popup-checkbox" />
+            <div class="popup">
+                <div class="popup-content">
+                    <label for="popup-specificattr" class="close-popup-button">&times;</label>
+                    <h3>Specific Attributes</h3>
+                    <p>Attributes that are specific to certain HTML elements and define their behavior or appearance.</p>
+                    <p><strong>Syntax: </strong>&lt;element specific-attribute="value"&gt;&lt;/element&gt;</p>
+                    <a href="specificattr.html" class="navigate-link" target="_blank">Discover HTML Specific Attributes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
