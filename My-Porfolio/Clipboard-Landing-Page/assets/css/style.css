@@ -36,10 +36,7 @@ a {
 }
 
 .header-logo img {
-    width: 125px;
-    height: 125px;
-    margin: 128px 656px 56px 658px;
-    image-rendering: crisp-edges;
+    margin: 128px auto 56px auto;
 }
 
 .header-content h1 {
@@ -53,14 +50,14 @@ a {
 }
 
 .header-content p {
-    width: 730px;
+    max-width: 730px;
     font-family: Bai Jamjuree;
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0.15px;
     text-align: center;
-    margin: 16px 130px 48px 130px;
+    margin: 16px auto 48px auto;
     color: var(--para-color);
 }
 
@@ -68,7 +65,6 @@ a {
     display: inline-block;
     padding: 13px 36px 13px 36px;
     border-radius: 40px;
-    margin-bottom: 150px;
 }
 
 .btn-ios {
@@ -108,6 +104,17 @@ a {
     color: rgba(255, 255, 255, 1);
 }
 
+.header-buttons {
+    margin-bottom: 150px;
+}
+
+.features-section-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .features-section h2 {
     font-family: Bai Jamjuree;
     font-size: 36px;
@@ -121,6 +128,7 @@ a {
 }
 
 .features-section p {
+    max-width: 730px;
     font-family: Bai Jamjuree;
     font-size: 18px;
     font-weight: 400;
@@ -140,7 +148,6 @@ a {
     width: 752px;
     height: 572px;
     margin-left: -32px;
-    image-rendering: crisp-edges;
 }
 
 .feature-details {
@@ -148,7 +155,7 @@ a {
     height: 406px;
     display: flex;
     flex-direction: column;
-    margin: 68px 260px 98px 110px;
+    margin: 68px auto 98px 110px;
 }
 
 .feature-details h3 {
@@ -194,10 +201,11 @@ a {
     letter-spacing: -0.58px;
     text-align: center;
     color: var(--heading-color);
-    margin: 150px 355px 19px 355px;
+    margin: 150px auto 19px auto;
 }
 
 .access-section p {
+    max-width: 730px;
     font-family: Bai Jamjuree;
     font-size: 18px;
     font-weight: 400;
@@ -205,14 +213,11 @@ a {
     letter-spacing: 0.13px;
     text-align: center;
     color: var(--para-color);
-    margin: 0px 355px 110px 355px;
+    margin: 0px auto 110px auto;
 }
 
 .access-image {
-    width: 812px;
-    height: 475px;
-    margin: 0px 314px 161px 314px;
-    image-rendering: crisp-edges;
+    margin: 0px auto 161px auto;
 }
 
 .workflow-section {
@@ -234,7 +239,7 @@ a {
 }
 
 .workflow-section p {
-    margin: 0 355px 72px 355px;
+    margin: 0 auto 72px auto;
     padding: 0;
     font-family: Bai Jamjuree;
     font-size: 18px;
@@ -249,7 +254,7 @@ a {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    margin: 0 165px 15px 165px;
+    margin: 0 auto 15px auto;
 }
 
 .feature-block {
@@ -261,26 +266,22 @@ a {
     margin: 0 30px 0 30px;
 }
 
-.feature-block img {
-    image-rendering: crisp-edges;
-}
-
 .blacklist-logo {
     width: 44px;
     height: 40px;
-    margin: 0px 153px 40px 153px;
+    margin: 0px auto 40px auto;
 }
 
 .text-logo {
     width: 36px;
     height: 32px;
-    margin: 0px 157px 44px 157px;
+    margin: 0px auto 50px auto;
 }
 
 .sneak-logo {
     width: 50px;
     height: 32px;
-    margin: 0px 150px 44px 150px;
+    margin: 0px auto 50px auto;
 }
 
 .feature-block h3 {
@@ -310,7 +311,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 150px 165px 150px 165px;
+    margin: 150px auto 150px auto;
 }
 
 .ibm-logo {
@@ -348,6 +349,10 @@ a {
     letter-spacing: 0.13px;
     text-align: center;
     color: var(--para-color);
+}
+
+.clipboard-buttons {
+    margin-bottom: 150px;
 }
 
 .footer {
@@ -391,7 +396,6 @@ a {
 
 .footer-social {
     margin: 63px 165px 63px auto;
-    image-rendering: crisp-edges;
 }
 
 .fb-logo {
@@ -412,40 +416,39 @@ a {
     margin-right: 24px;
 }
 
-@media only screen and (max-width: 768px) {
-    .header {
-        background-image: url('../images/bg-image-mobile.png');
-        background-size: 100% auto;
-        background-position: top center;
-        background-repeat: no-repeat;
-    }
+.logo-hover:hover {
+    filter: invert(59%) sepia(68%) saturate(434%) hue-rotate(121deg) brightness(90%) contrast(94%);
+}
 
-    .header-logo img {
-        margin: 123px 125px 64px 125px;
-    }
-
+@media only screen and (max-width: 1218px) {
     .header-content h1 {
-        margin: 0 32px 16px 32px;
+        width: 500px;
+        margin: 0 auto 16px auto;
         font-size: 32px;
+        font-weight: 600;
         line-height: 40px;
-        letter-spacing: -0.52px;
+        letter-spacing: -0.5px;
     }
 
     .header-content p {
+        width: 500px;
+        margin: 0 auto 48px auto;
         font-size: 16px;
+        font-weight: 400;
         line-height: 26px;
         letter-spacing: 0.11px;
-        margin: 0 32px 48px 32px;
     }
 
     .btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        width: 311px;
+        width: 300px;
         margin: 0 auto 24px auto;
         padding: 13px 49px 13px 50px;
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 0.5px;
     }
 
     .btn-mac {
@@ -457,14 +460,15 @@ a {
         margin-bottom: 16px;
         font-size: 28px;
         line-height: 35px;
-        letter-spacing: -0.45px;
+        letter-spacing: -0.46px;
     }
 
     .features-section p {
-        margin: 0 32px 65px 32px;
+        width: 500px;
+        margin: 0 auto 65px auto;
         font-size: 16px;
         line-height: 26px;
-        letter-spacing: 0.11px;
+        letter-spacing: 0.12px;
     }
 
     .features-content {
@@ -475,27 +479,36 @@ a {
     }
 
     .feature-image {
-        width: 312px;
-        height: 238px;
+        width: auto;
+        height: auto;
+        margin: 0px;
     }
 
     .feature-details {
-        width: 311px;
+        width: 450px;
         display: flex;
+        align-items: center;
         flex-direction: column;
-        margin: 56px 32px 10px 32px;
+        margin: 56px auto 10px auto;
     }
 
     .feature-details h3 {
         text-align: center;
         margin-bottom: 10px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: -0.39px;
+        text-align: center;
     }
 
     .feature-details p {
         margin: 0;
         padding: 0;
+        font-size: 16px;
+        font-weight: 400;
         line-height: 26px;
-        letter-spacing: 0.12px;
+        letter-spacing: 0.11px;
         text-align: center;
     }
 
@@ -505,28 +518,29 @@ a {
     }
 
     .access-section h2 {
+        width: 500px;
         font-size: 28px;
         line-height: 35px;
         letter-spacing: -0.46px;
-        text-align: center;
-        margin: 186px 32px 16px 32px;
+        margin: 186px auto 16px auto;
     }
 
     .access-section p {
+        width: 500px;
         font-size: 16px;
         line-height: 26px;
         letter-spacing: 0.12px;
-        text-align: center;
-        margin: 0px 32px 64px 32px;
+        margin: 0px auto 64px auto;
     }
 
     .access-image {
-        width: 311px;
+        width: auto;
         height: 182px;
-        margin: 0px 32px 130px 32px;
+        margin: 0px auto 130px auto;
     }
 
     .workflow-section h2 {
+        width: 500px;
         font-size: 28x;
         line-height: 35px;
         letter-spacing: -0.46px;
@@ -535,8 +549,10 @@ a {
     }
 
     .workflow-section p {
-        margin: 0 32px 90px 32px;
+        width: 500px;
+        margin: 0 auto 90px auto;
         padding: 0;
+        font-size: 16px;
         line-height: 26px;
         letter-spacing: 0.12px;
         text-align: center;
@@ -547,11 +563,11 @@ a {
         justify-content: flex-start;
         align-items: flex-start;
         flex-direction: column;
-        margin: 0 32px 131px 32px;
+        margin: 0 auto 131px auto;
     }
 
     .feature-block {
-        width: 311px;
+        width: 500px;
     }
 
     .text-feature {
@@ -559,19 +575,23 @@ a {
     }
 
     .blacklist-logo {
-        margin: 0px 133px 40px 134px;
+        margin: 0px auto 40px auto;
     }
 
     .text-logo {
-        margin: 0px 137.96px 44px 138px;
+        margin: 0px auto 44px auto;
     }
 
     .sneak-logo {
-        margin: 0px 130.39px 44.11px 131px;
+        margin: 0px auto 44.11px auto;
     }
 
     .feature-block h3 {
         margin-bottom: 18px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: -0.39px;
     }
 
     .feature-block p {
@@ -579,15 +599,19 @@ a {
         letter-spacing: 0.12px;
         margin: 0;
         padding: 0;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0.11px;
+        text-align: center;
     }
 
-    /* Trusted Companies */
     .trusted-companies {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin: 0px 118px 170px 118px;
+        margin: 0px auto 170px auto;
     }
 
     .ibm-logo {
@@ -599,6 +623,7 @@ a {
     }
 
     .clipboard-section h2 {
+        width: 500px;
         font-size: 28px;
         line-height: 35px;
         letter-spacing: -0.46px;
@@ -606,10 +631,17 @@ a {
     }
 
     .clipboard-section p {
-        margin: 0px 32px 46px 32px;
+        width: 500px;
+        margin: 0px auto 46px auto;
         font-size: 16px;
         line-height: 26px;
         letter-spacing: 0.12px;
+    }
+
+    .clipboard-buttons {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
     .footer {
@@ -621,7 +653,7 @@ a {
     }
 
     .logo-image {
-        margin: 52px 160px 40px 160px;
+        margin: 52px auto 40px auto;
     }
 
     .footer-links {
@@ -635,7 +667,7 @@ a {
     }
 
     .footer-social {
-        margin: 48px 107px 51px 108px;
+        margin: 48px auto 51px auto;
     }
 
     .fb-logo {
@@ -648,5 +680,67 @@ a {
 
     .twitter-logo {
         margin-right: 40px;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    .header-content h1 {
+        width: 311px;
+        font-size: 32px;
+    }
+
+    .header-content p {
+        width: 311px;
+    }
+
+    .btn {
+        width: 200px;
+    }
+
+    .features-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .features-section h2 {
+        width: 311px;
+    }
+
+    .features-section p {
+        width: 311px;
+    }
+
+    .feature-details {
+        width: 311px;
+    }
+
+    .access-section h2 {
+        width: 311px;
+    }
+
+    .access-section p {
+        width: 311px;
+    }
+
+    .workflow-section h2 {
+        width: 311px;
+    }
+
+    .workflow-section p {
+        width: 311px;
+    }
+
+    .feature-block {
+        width: 311px;
+    }
+
+    .clipboard-section h2 {
+        width: 311px;
+    }
+
+    .clipboard-section p {
+        width: 311px;
     }
 }
