@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --white: #FFFFFF;
+    --bg-color: #E6EFF5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.subscription-card {
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 635px;
+}
+
+.subscription-header {
+    padding: 40px;
+    background-color: var(--white);
+}
+
+.subscription-header h2 {
+    color: #3aafa9;
+    font-family: Karla;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.06px;
+    letter-spacing: -0.30px;
+    text-align: left;
+}
+
+.header-text {
+    font-family: Karla;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.20px;
+    text-align: left;
+    color: #9AA7BE;
+}
+
+.highlight-text {
+    font-family: Karla;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.04px;
+    letter-spacing: -0.22px;
+    text-align: left;
+    color: #C0DF33;
+    margin: 24px auto 11px auto;
+}
+
+.subscription-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.monthly-subscription {
+    background-color: #2AB3B1;
+    width: 318px;
+    padding: 40px;
+}
+
+.monthly-subscription h3 {
+    font-family: Karla;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.04px;
+    letter-spacing: -0.22px;
+    text-align: left;
+    color: var(--white);
+}
+
+.price {
+    font-family: Karla;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 37.41px;
+    letter-spacing: -0.40px;
+    text-align: left;
+    color: var(--white);
+    margin: 18px auto 4px auto;
+}
+
+.price span {
+    font-family: Karla;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.20px;
+    text-align: left;
+    color: rgba(255, 255, 255, 50%)
+}
+
+.price-text {
+    font-family: Karla;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: -0.20px;
+    text-align: left;
+    color: var(--white);
+}
+
+.btn-signup {
+    padding: 15px 89px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px 0px #00000019;
+    background-color: #C0DF33;
+    font-family: Karla;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.7px;
+    letter-spacing: -0.20px;
+    text-align: left;
+    color: var(--white);
+    margin-top: 26px;
+}
+
+.why-us {
+    background-color: rgba(42, 179, 177, 75%);
+    width: 318px;
+    padding: 40px;
+}
+
+.why-us h3 {
+    font-family: Karla;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.04px;
+    letter-spacing: -0.22px;
+    text-align: left;
+    color: var(--white);
+}
+
+.why-us ul {
+    list-style-type: none;
+    margin-top: 18px;
+}
+
+.why-us ul li {
+    font-family: Karla;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.17px;
+    text-align: left;
+    color: var(--white);
+    opacity: 75%;
+}
+
+@media only screen and (max-width: 625px) {
+    body {
+        height: auto;
+    }
+
+    .subscription-card {
+        border-radius: 10px 10px 0px 0px;
+        overflow: hidden;
+        max-width: 311px;
+        margin-top: 72px;
+        margin-bottom: 62px;
+    }
+
+    .subscription-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
