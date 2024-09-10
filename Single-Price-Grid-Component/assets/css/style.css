@@ -86,6 +86,11 @@ body {
 }
 
 .price {
+    display: flex;
+    flex-direction: row;
+}
+
+.price-num {
     font-family: Karla;
     font-size: 32px;
     font-weight: 700;
@@ -93,17 +98,21 @@ body {
     letter-spacing: -0.40px;
     text-align: left;
     color: var(--white);
-    margin: 18px auto 4px auto;
+    margin: 18px 11px 4px 0;
 }
 
-.price span {
+.price-span {
     font-family: Karla;
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
     letter-spacing: -0.20px;
-    text-align: left;
-    color: rgba(255, 255, 255, 50%)
+    text-align: center;
+    color: rgba(255, 255, 255, 50%);
+    margin: 14px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .price-text {
@@ -177,9 +186,46 @@ body {
         margin-bottom: 62px;
     }
 
+    .subscription-header {
+        padding: 24px;
+        background-color: var(--white);
+    }
+
     .subscription-details {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .monthly-subscription {
+        padding: 24px;
+    }
+
+    .subscription-header h2 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 23.38px;
+        letter-spacing: -0.25px;
+        text-align: left;
+    }
+
+    .highlight-text {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: -0.18px;
+        text-align: left;
+    }
+
+    .header-text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: -0.17px;
+        text-align: left;
+    }
+
+    .why-us {
+        padding: 24px;
     }
 }
