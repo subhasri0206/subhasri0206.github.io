@@ -981,15 +981,8 @@ hr {
         margin-bottom: 34px;
     }
 
-    .projects-grid {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 90%;
-        gap: 30px;
-    }
-
     .project-image {
-        width: 100%;
+        width: 90%;
     }
 
     .footer-title {
