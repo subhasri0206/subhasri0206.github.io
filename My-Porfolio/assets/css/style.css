@@ -77,7 +77,6 @@ a {
     cursor: pointer;
 }
 
-/* Intro Section */
 .header-intro {
     width: 607px;
     margin: 123.44px auto 100.6px auto;
@@ -635,6 +634,18 @@ hr {
     flex-direction: row;
 }
 
+.footer-content-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-content-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .footer-item {
     display: flex;
     justify-content: center;
@@ -728,6 +739,20 @@ hr {
         align-items: center;
         text-align: center;
         flex-direction: column;
+    }
+
+    .footer-content-top {
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-content-bottom {
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .footer-para {
@@ -963,10 +988,11 @@ hr {
         display: flex;
         flex-direction: row;
         margin-bottom: 10px;
+        width: 90%;
     }
 
     .skill-bar-bottom {
-        max-width: 360px;
+        max-width: 320px;
     }
 
     .projects-title {
@@ -1003,6 +1029,18 @@ hr {
         align-items: center;
         text-align: center;
         flex-direction: column;
+    }
+
+    .footer-content-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-content-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .footer-item {
