@@ -1,0 +1,155 @@
+/* Set up the main container (body) with a flexbox layout */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Calibri';
+}
+
+/* Style the header of the webpage */
+.webpage-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for the card elements */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Style for individual card elements */
+.card {
+    position: relative;
+    flex: 1 1 32%;
+    max-width: 600px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    min-height: 350px;
+}
+
+/* Style for list items inside the card */
+.card li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Style for the "View Details" button */
+.view-details-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #F58448;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.view-details-button:hover {
+    background-color: #fa681a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hide the checkbox used for triggering the popup */
+.popup-checkbox {
+    display: none;
+}
+
+/* Style for the popup */
+.popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #00000080;
+}
+
+/* Style for the popup content */
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 11;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.code-block {
+    text-align: left;
+}
+
+/* Style for the close button in the popup */
+.close-popup-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Show the popup when the checkbox is checked */
+.popup-checkbox:checked+.popup {
+    display: flex;
+}
+
+/* Style for navigation links within the popup */
+.navigate-link {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #F58448;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.navigate-link:hover {
+    background-color: #fa681a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styles */
+/* For tablets and larger devices */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 45%;
+        /* Two cards per row */
+    }
+}
+
+/* For small devices, like smartphones */
+@media (max-width: 767px) {
+    .card {
+        flex: 1 1 90%;
+        /* One card per row */
+    }
+}
