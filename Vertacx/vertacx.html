@@ -21,12 +21,13 @@
             <div class="logo">
                 <img src="./assets/images/vertacx-logo.png" alt="Vertacx-logo">
             </div>
-            <nav>
+            <nav class="nav-list">
                 <ul>
                     <li><a href="javascript:void(0)">Home</a></li>
                     <li><a href="#why-vertacx">Why Vertacx</a></li>
                     <li><a href="#our-programs">Our Programs</a></li>
                     <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#skills-section">About Us</a></li>
                 </ul>
             </nav>
             <div class="toggle-container">
@@ -34,9 +35,81 @@
                     <img class="icon sun-icon" src="./assets/images/sun-icon.png" alt="sun-icon">
                     <img class="icon moon-icon" src="./assets/images/moon-icon.png" alt="moon-icon">
                 </button>
-                <a class="curriculum-btn" href="javascript:void(0)">Curriculum</a>
-            </div>
+                <label for="popup-form" class="curriculum-btn">Contact Us</label>
+                <input type="checkbox" id="popup-form" class="popup-checkbox" />
+                <div class="form-container pop-up-content">
+                    <label for="popup-form" class="close-popup-button">&times;</label>
+                    <form id="popup-form-content">
+                        <div class="form-group group-col">
+                            <div class="form-group">
+                                <label for="interest">We are interested in</label>
+                                <select id="interest" required>
+                                    <option value="">Select an option</option>
+                                    <option value="Option 1">FrontEnd Development</option>
+                                    <option value="Option 2">Backend Development</option>
+                                    <option value="Option 2">AI/ML Development</option>
+                                    <option value="Option 2">LowCode Development</option>
+                                </select>
+                                <span class="error-message" id="interestError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="weAre">We are</label>
+                                <select id="weAre" required>
+                                    <option value="">Select an option</option>
+                                    <option value="Option 1">Part Time</option>
+                                    <option value="Option 2">Full Time</option>
+                                    <option value="Option 2">Permanent</option>
+                                </select>
+                                <span class="error-message" id="weAreError"></span>
+                            </div>
+                        </div>
 
+                        <div class="form-group">
+                            <label for="stage">What stage are you at</label>
+                            <select id="stage" required>
+                                <option value="">Select an option</option>
+                                <option value="Stage 1">Beginner</option>
+                                <option value="Stage 2">Intermediate</option>
+                                <option value="Stage 2">Expert</option>
+                            </select>
+                            <span class="error-message" id="stageError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="First Middle Last" required>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group group-col">
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" placeholder="email@email.com" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Your Phone Number</label>
+                                <div class="phone-input">
+                                    <span class="flag">🇮🇳</span>
+                                    <input type="tel" id="phone" placeholder="+91" required>
+                                </div>
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group group-col">
+                            <p>This form collects your contact information so that we can correspond with you. Check out
+                                our privacy policy to protect and manage your data.</p>
+                            <button type="submit">Submit ➔</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </header>
 
         <section class="hero">
@@ -44,8 +117,8 @@
             <p>At Vertacx, we deliver personalized, actionable learning in a real-world software company to develop
                 industry-ready software engineers.</p>
             <div class="cta-buttons">
-                <a href="javascript:void(0)" class="started-btn">Get Started</a>
-                <a href="javascript:void(0)" class="demo-btn">Book a Demo</a>
+                <label for="popup-form" class="curriculum-btn demo-btn">Book Your Free Consultation</label>
+                <input type="checkbox" id="popup-form" class="popup-checkbox" />
             </div>
         </section>
 
@@ -125,70 +198,69 @@
             <p>Personalized learning at scale.</p>
             <div class="accordion">
                 <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <span>1. Free Career Assessment</span>
-                        <span class="accordion-icon">►</span>
-                    </h3>
+                    <div class="accordion-header">
+                        <h3>1. Free Career Assessment</h3>
+                        <span class="arrow">&#9662;</span> <!-- Down Arrow -->
+                    </div>
                     <div class="accordion-content">
-                        <p>Start with our Free Career Assessment to identify your strengths and align them with the most
-                            suitable program. This personalized evaluation sets the foundation for your successful
-                            learning
-                            journey.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                        <p>Phasellus egestas tellus rutrum tellus pellentesque. Malesuada nunc vel risus commodo viverra
-                            maecenas.</p>
+                        <p>Details about Free Career Assessment...</p>
                     </div>
                 </div>
+
                 <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <span>2. Program Onboarding</span>
-                        <span class="accordion-icon">►</span>
-                    </h3>
+                    <div class="accordion-header">
+                        <h3>2. Program Onboarding</h3>
+                        <span class="arrow">&#9662;</span>
+                    </div>
                     <div class="accordion-content">
-                        <p>Information about Program Onboarding and the steps required for new learners.</p>
+                        <p>Seamlessly transition into your chosen program with our comprehensive onboarding process...
+                        </p>
                     </div>
                 </div>
+
                 <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <span>3. Learning Sprint and Retrospective</span>
-                        <span class="accordion-icon">►</span>
-                    </h3>
+                    <div class="accordion-header">
+                        <h3>3. Learning Sprint and Retrospective</h3>
+                        <span class="arrow">&#9662;</span>
+                    </div>
                     <div class="accordion-content">
-                        <p>Information on learning sprints and retrospectives.</p>
+                        <p>Details about Learning Sprint and Retrospective...</p>
                     </div>
                 </div>
+
                 <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <span>4. Capstone Project</span>
-                        <span class="accordion-icon">►</span>
-                    </h3>
+                    <div class="accordion-header">
+                        <h3>4. Learning Sprint and Retrospective</h3>
+                        <span class="arrow">&#9662;</span>
+                    </div>
                     <div class="accordion-content">
-                        <p>Details about the Capstone Project and how to get involved.</p>
+                        <p>Details about Learning Sprint and Retrospective...</p>
                     </div>
                 </div>
+
                 <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <span>5. Internship</span>
-                        <span class="accordion-icon">►</span>
-                    </h3>
+                    <div class="accordion-header">
+                        <h3>5. Learning Sprint and Retrospective</h3>
+                        <span class="arrow">&#9662;</span>
+                    </div>
                     <div class="accordion-content">
-                        <p>Details about the internship and how it works.</p>
+                        <p>Details about Learning Sprint and Retrospective...</p>
                     </div>
                 </div>
             </div>
-            <a href="javascript:void(0)" class="career-btn">Get a Career Assessment</a>
+            <label for="popup-form" class="curriculum-btn career-btn">Get a Career Assessment</label>
+            <input type="checkbox" id="popup-form" class="popup-checkbox" />
         </section>
 
         <section id="service">
-            <div class="service">
-                <img src="./assets/images/services-image.png" alt="services-image">
+            <div>
+                <img class="service" src="./assets/images/services-image.png" alt="services-image">
+                <img class="service-mobile" src="./assets/images/services-image-mobile.png" alt="services-image-mobile">
             </div>
         </section>
 
         <section id="skills-section">
             <div class="skills-section">
-                <h4 class="skills-heading4">Lorem ipsum</h4>
                 <h3 class="skills-heading3">Workplace skills that boost employability</h3>
                 <p class="skills-paratop">For the modern employee, technical skills are only part of the equation. Our
                     programs focus on the <span>essential soft skills</span> employees need to be the next generation of
@@ -201,17 +273,17 @@
             </div>
         </section>
 
-        <section id="experts-section">
-            <p class="experts-para">Learn how personalized learning can transform your organization.</p>
-            <a href="javascript:void(0)" class="expert-btn">Talk to an Expert</a>
-        </section>
-
         <footer>
             <img src="./assets/images/vertacx-logo.png" alt="Vertacx-logo">
             <p class="footer-content">Vertacx is led by a team with over 20 years of experience in solving real-world
                 challenges and developing
                 software applications for startups and SMEs in Fintech, PropTech, and eCommerce. We focus on creating
                 industry-ready professionals by honing both technical and soft skills.</p>
+            <section id="experts-section">
+                <p class="experts-para">Learn how personalized learning can transform your organization.</p>
+                <label for="popup-form" class="curriculum-btn expert-btn">Get In Touch</label>
+                <input type="checkbox" id="popup-form" class="popup-checkbox" />
+            </section>
             <div class="social-icons">
                 <a class="icon yt-icon" href="javascript:void(0)"><img src="./assets/images/youtube-logo.png"
                         alt="Facebook"></a>
@@ -224,9 +296,9 @@
             <p class="address">6A, 4th Floor, GVR complex,<br>
                 Lawson’s road, Contonment, Trichy - 620001.</p class="address">
         </footer>
-    </div>
-    <script href="assets/js/lightmode.js"></script>
-    <script href="assets/js/main.js"></script>
+        <script href="assets/js/lightmode.js"></script>
+        <script href="assets/js/form.js"></script>
+        <script href="assets/js/main.js"></script>
 </body>
 
 </html>
