@@ -1029,15 +1029,18 @@ hr {
         align-items: center;
         text-align: center;
         flex-direction: column;
+        margin: auto;
     }
 
     .footer-content-top {
+        max-width: 200px;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
     .footer-content-bottom {
+        max-width: 200px;
         display: flex;
         flex-direction: column;
         justify-content: center;
