@@ -8,7 +8,12 @@
     --started-bg-color: #18910D4D;
     --started-text-color: #E3E3E34D;
     --started-hover-bg: #18910D;
+    --border-color: #7DFFAF;
     --card-bg-color: #2C2C2C;
+    --card-heading-color: #E5F2E3;
+    --card-content-color: #E5F2E3;
+    --card-highlight-color: #7DFFAF;
+    --toggle-bg: #F1FAF0;
 }
 
 * {
@@ -56,6 +61,68 @@ nav ul li a {
     line-height: 24px;
     text-align: center;
     color: var(--nav-text-color);
+}
+
+nav ul li a:hover {
+    color: var(--btn-bg-color);
+}
+
+.lightmode {
+    --bg-color: #F1FAF0;
+    --nav-text-color: #060F05;
+    --btn-bg-color: #022648;
+    --btn-text-color: #F1FAF0;
+    --started-bg-color: #0226484D;
+    --started-text-color: #F4FFF2;
+    --started-hover-bg: #0226489d;
+    --border-color: #BF2AF6;
+    --card-bg-color: #022648;
+    --card-bg-color: #022648;
+    --card-heading-color: #FFFFFF;
+    --card-content-color: #E5F2E3;
+    --card-highlight-color: #F1FAF0;
+    --toggle-bg: #022648;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#theme-switch {
+    margin-right: 16px;
+    background-color: var(--toggle-bg);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#theme-switch img:last-child {
+    display: none;
+}
+
+.lightmode #theme-switch img:first-child {
+    display: none;
+}
+
+.lightmode #theme-switch img:last-child {
+    display: block;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.icon {
+    padding: 6.5px 7px 7.5px 7px;
+    width: 18px;
+    height: 18px;
 }
 
 .curriculum-btn {
@@ -153,7 +220,7 @@ nav ul li a {
     justify-content: center;
 }
 
-.why-vertacx h2 {
+#why-vertacx h2 {
     font-family: Poppins;
     font-size: 32px;
     font-weight: 600;
@@ -163,7 +230,7 @@ nav ul li a {
     color: var(--btn-bg-color);
 }
 
-.why-vertacx p {
+#why-vertacx p {
     max-width: 612px;
     font-family: Poppins;
     font-size: 32px;
@@ -175,7 +242,7 @@ nav ul li a {
     margin: 30px auto 24px auto;
 }
 
-.why-vertacx h4 {
+#why-vertacx h4 {
     max-width: 591px;
     font-family: Poppins;
     font-size: 24px;
@@ -196,7 +263,7 @@ nav ul li a {
 
 .feature {
     text-align: center;
-    border: 1px solid var(--btn-bg-color);
+    border: 1px solid var(--border-color);
     border-radius: 120px;
 }
 
@@ -222,7 +289,7 @@ nav ul li a {
     color: var(--nav-text-color);
 }
 
-.feature p {
+.feature h5 {
     font-family: Poppins;
     font-size: 16px;
     font-weight: 300;
@@ -232,17 +299,17 @@ nav ul li a {
     color: var(--nav-text-color);
 }
 
-.feature-skills p {
+.feature-skills h5 {
     max-width: 306px;
     margin: 12px 29px 61px 25px;
 }
 
-.feature-membership p {
+.feature-membership h5 {
     max-width: 314px;
     margin: 12px 23px 68px 23px;
 }
 
-.feature-session p {
+.feature-session h5 {
     max-width: 271px;
     margin: 12px 44.5px 76px 44.5px;
 }
@@ -289,7 +356,7 @@ nav ul li a {
     font-weight: 600;
     line-height: 31.2px;
     text-align: center;
-    color: var(--nav-text-color);
+    color: var(--card-heading-color);
     margin-bottom: 24px;
 }
 
@@ -301,7 +368,7 @@ nav ul li a {
     font-weight: 300;
     line-height: 34px;
     text-align: center;
-    color: var(--nav-text-color);
+    color: var(--card-content-color);
     margin-bottom: 20px;
 }
 
@@ -312,7 +379,7 @@ nav ul li a {
     font-weight: 500;
     line-height: 34px;
     text-align: center;
-    color: var(--btn-bg-color);
+    color: var(--card-highlight-color);
     margin: 20px auto 61.82px auto;
 }
 
