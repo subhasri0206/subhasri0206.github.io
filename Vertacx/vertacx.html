@@ -15,21 +15,24 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body>
+<body class="darkmode">
     <div class="container">
         <header>
-            <div class="logo">
-                <img src="./assets/images/vertacx-logo.png" alt="Vertacx-logo">
+            <div>
+                <img class="logo" src="./assets/images/vertacx-logo.png" alt="Vertacx-logo-Dark">
+                <img class="logo-light" src="./assets/images/vertacx-logo-light.png" alt="Vertacx-logo-Light">
             </div>
-            <nav class="nav-list">
-                <ul>
-                    <li><a href="javascript:void(0)">Home</a></li>
-                    <li><a href="#why-vertacx">Why Vertacx</a></li>
-                    <li><a href="#our-programs">Our Programs</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#skills-section">About Us</a></li>
-                </ul>
-            </nav>
+            <div>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="javascript:void(0)">Home</a></li>
+                        <li><a href="#why-vertacx">Why Vertacx</a></li>
+                        <li><a href="#our-programs">Our Programs</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#skills-section">About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
             <div class="toggle-container">
                 <button type="button" id="theme-switch">
                     <img class="icon sun-icon" src="./assets/images/sun-icon.png" alt="sun-icon">
@@ -40,67 +43,69 @@
                 <div class="form-container pop-up-content">
                     <label for="popup-form" class="close-popup-button">&times;</label>
                     <form id="popup-form-content">
-                        <div class="form-group group-col">
-                            <div class="form-group">
-                                <label for="interest">We are interested in</label>
-                                <select id="interest" required>
-                                    <option value="">Select an option</option>
-                                    <option value="Option 1">FrontEnd Development</option>
-                                    <option value="Option 2">Backend Development</option>
-                                    <option value="Option 2">AI/ML Development</option>
-                                    <option value="Option 2">LowCode Development</option>
-                                </select>
-                                <span class="error-message" id="interestError"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="weAre">We are</label>
-                                <select id="weAre" required>
-                                    <option value="">Select an option</option>
-                                    <option value="Option 1">Part Time</option>
-                                    <option value="Option 2">Full Time</option>
-                                    <option value="Option 2">Permanent</option>
-                                </select>
-                                <span class="error-message" id="weAreError"></span>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="stage">What stage are you at</label>
-                            <select id="stage" required>
-                                <option value="">Select an option</option>
-                                <option value="Stage 1">Beginner</option>
-                                <option value="Stage 2">Intermediate</option>
-                                <option value="Stage 2">Expert</option>
-                            </select>
-                            <span class="error-message" id="stageError"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" placeholder="First Middle Last" required>
-                            <span class="error-message" id="nameError"></span>
-                        </div>
-
-                        <div class="form-group group-col">
-                            <div class="form-group">
-                                <label for="email">Your Email</label>
-                                <input type="email" id="email" placeholder="email@email.com" required>
-                                <span class="error-message" id="emailError"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Your Phone Number</label>
-                                <div class="phone-input">
-                                    <span class="flag">🇮🇳</span>
-                                    <input type="tel" id="phone" placeholder="+91" required>
+                        <div class="form-item">
+                            <div class="form-group group-col">
+                                <div class="form-group">
+                                    <label for="interest">WE ARE INTERESTED IN</label>
+                                    <select id="interest" required>
+                                        <option value="">Select an option</option>
+                                        <option value="Option 1">FrontEnd Development</option>
+                                        <option value="Option 2">Backend Development</option>
+                                        <option value="Option 2">AI/ML Development</option>
+                                        <option value="Option 2">LowCode Development</option>
+                                    </select>
+                                    <span class="error-message" id="interestError"></span>
                                 </div>
-                                <span class="error-message" id="phoneError"></span>
+                                <div class="form-group">
+                                    <label for="weAre">WE ARE</label>
+                                    <select id="weAre" required>
+                                        <option value="">Select an option</option>
+                                        <option value="Option 1">Part Time</option>
+                                        <option value="Option 2">Full Time</option>
+                                        <option value="Option 2">Permanent</option>
+                                    </select>
+                                    <span class="error-message" id="weAreError"></span>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="form-group group-col">
-                            <p>This form collects your contact information so that we can correspond with you. Check out
-                                our privacy policy to protect and manage your data.</p>
-                            <button type="submit">Submit ➔</button>
+                            <div class="form-group">
+                                <label for="stage">WHAT STAGE ARE YOU AT</label>
+                                <select id="stage" required>
+                                    <option value="">Select an option</option>
+                                    <option value="Stage 1">Beginner</option>
+                                    <option value="Stage 2">Intermediate</option>
+                                    <option value="Stage 2">Expert</option>
+                                </select>
+                                <span class="error-message" id="stageError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">YOUR NAME</label>
+                                <input type="text" id="name" placeholder="First Middle Last" required>
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+
+                            <div class="form-group group-col">
+                                <div class="form-group">
+                                    <label for="email">YOUR EMAIL</label>
+                                    <input type="email" id="email" placeholder="email@email.com" required>
+                                    <span class="error-message" id="emailError"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">YOUR PHONE</label>
+                                    <div class="phone-input">
+                                        <input type="tel" id="phone" placeholder="+91" required>
+                                    </div>
+                                    <span class="error-message" id="phoneError"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group group-col group-margin">
+                                <p>This form collects your contact information so that we can correspond with you. Check
+                                    out
+                                    our privacy policy to protect and manage your data.</p>
+                                <button type="submit">Submit ➔</button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -128,19 +133,25 @@
             <h4>Vertacx adopts a radically human approach to upskilling students and graduates.</h4>
             <div class="features-block">
                 <div class="feature feature-skills">
-                    <img src="./assets/images/skills-image.png" alt="skills-image">
+                    <img class="skills-image" src="./assets/images/skills-image.png" alt="skills-image">
+                    <img class="skills-image-light" src="./assets/images/skills-image-light.png"
+                        alt="skills-image-light">
                     <h3>Bundled Soft Skills</h3>
                     <h5>Vertacx offers agile-based learning programs led by industry mentors, focusing an comprehensive
                         software engineering skills and essential soft skills in a work-like environment</h5>
                 </div>
                 <div class="feature feature-membership">
-                    <img src="./assets/images/membership-image.png" alt="membership-image">
+                    <img class="membership-image" src="./assets/images/membership-image.png" alt="membership-image">
+                    <img class="membership-image-light" src="./assets/images/membership-image-light.png"
+                        alt="membership-image-light">
                     <h3>1-on-1 Mentorship</h3>
                     <h5>Vertacx collaborates with tech companies to offer Industry- relevant training and 1-on-1
                         mentorship, along with real-world projects and Internships.</h5>
                 </div>
                 <div class="feature feature-session">
-                    <img src="./assets/images/session-image.png" alt="session-image">
+                    <img class="session-image" src="./assets/images/session-image.png" alt="session-image">
+                    <img class="session-image-light" src="./assets/images/session-image-light.png"
+                        alt="session-image-light">
                     <h3>Interactive Sessions</h3>
                     <h5>No lecture hall here. We blend role-playing, hands-on exersises, and diverse interactive content
                         for a highly impactful learning experience.</h5>
@@ -154,6 +165,8 @@
                 <div class="card">
                     <div>
                         <img class="idea-icon" src="assets/images/idea-image.png" alt="Lightbulb-icon">
+                        <img class="idea-icon-light" src="assets/images/idea-image-light.png"
+                            alt="Lightbulb-icon-Light">
                     </div>
                     <h3 class="card-heading">Makers Nest</h3>
                     <p class="card-content">Makers Nest simulates a full-time job by immersing participants in an office
@@ -166,6 +179,8 @@
                 <div class="card">
                     <div>
                         <img class="idea-icon" src="assets/images/idea-image.png" alt="Lightbulb-icon">
+                        <img class="idea-icon-light" src="assets/images/idea-image-light.png"
+                            alt="Lightbulb-icon-Light">
                     </div>
                     <h3 class="card-heading">Lorem Ipsum</h3>
                     <p class="card-content">Makers Nest simulates a full-time job by immersing participants in an office
@@ -178,6 +193,8 @@
                 <div class="card">
                     <div>
                         <img class="idea-icon" src="assets/images/idea-image.png" alt="Lightbulb-icon">
+                        <img class="idea-icon-light" src="assets/images/idea-image-light.png"
+                            alt="Lightbulb-icon-Light">
                     </div>
                     <h3 class="card-heading">Lorem Ipsum</h3>
                     <p class="card-content">Makers Nest simulates a full-time job by immersing participants in an office
@@ -199,52 +216,66 @@
             <div class="accordion">
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <h3>1. Free Career Assessment</h3>
-                        <span class="arrow">&#9662;</span> <!-- Down Arrow -->
+                        <h3>1. Career Assessments</h3>
+                        <span class="arrow">&#9654;</span>
                     </div>
                     <div class="accordion-content">
-                        <p>Details about Free Career Assessment...</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab est modi ex eos ipsam expedita,
+                            alias optio tempore quis repellendus perferendis eveniet deserunt sunt exercitationem error
+                            quaerat atque soluta iure ea ducimus vitae ipsa velit adipisci? Rem dignissimos dolores,
+                            aperiam doloribus porro ullam magni, exercitationem placeat omnis nesciunt minima rerum!</p>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <h3>2. Program Onboarding</h3>
-                        <span class="arrow">&#9662;</span>
+                        <span class="arrow">&#9654;</span>
                     </div>
                     <div class="accordion-content">
-                        <p>Seamlessly transition into your chosen program with our comprehensive onboarding process...
-                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab est modi ex eos ipsam expedita,
+                            alias optio tempore quis repellendus perferendis eveniet deserunt sunt exercitationem error
+                            quaerat atque soluta iure ea ducimus vitae ipsa velit adipisci? Rem dignissimos dolores,
+                            aperiam doloribus porro ullam magni, exercitationem placeat omnis nesciunt minima rerum!</p>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <h3>3. Learning Sprint and Retrospective</h3>
-                        <span class="arrow">&#9662;</span>
+                        <span class="arrow">&#9654;</span>
                     </div>
                     <div class="accordion-content">
-                        <p>Details about Learning Sprint and Retrospective...</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab est modi ex eos ipsam expedita,
+                            alias optio tempore quis repellendus perferendis eveniet deserunt sunt exercitationem error
+                            quaerat atque soluta iure ea ducimus vitae ipsa velit adipisci? Rem dignissimos dolores,
+                            aperiam doloribus porro ullam magni, exercitationem placeat omnis nesciunt minima rerum!</p>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <h3>4. Learning Sprint and Retrospective</h3>
-                        <span class="arrow">&#9662;</span>
+                        <h3>4. Capstone Project</h3>
+                        <span class="arrow">&#9654;</span>
                     </div>
                     <div class="accordion-content">
-                        <p>Details about Learning Sprint and Retrospective...</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab est modi ex eos ipsam expedita,
+                            alias optio tempore quis repellendus perferendis eveniet deserunt sunt exercitationem error
+                            quaerat atque soluta iure ea ducimus vitae ipsa velit adipisci? Rem dignissimos dolores,
+                            aperiam doloribus porro ullam magni, exercitationem placeat omnis nesciunt minima rerum!</p>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <h3>5. Learning Sprint and Retrospective</h3>
-                        <span class="arrow">&#9662;</span>
+                        <h3>5. Internship</h3>
+                        <span class="arrow">&#9654;</span>
                     </div>
                     <div class="accordion-content">
-                        <p>Details about Learning Sprint and Retrospective...</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab est modi ex eos ipsam expedita,
+                            alias optio tempore quis repellendus perferendis eveniet deserunt sunt exercitationem error
+                            quaerat atque soluta iure ea ducimus vitae ipsa velit adipisci? Rem dignissimos dolores,
+                            aperiam doloribus porro ullam magni, exercitationem placeat omnis nesciunt minima rerum!</p>
                     </div>
                 </div>
             </div>
@@ -254,8 +285,10 @@
 
         <section id="service">
             <div>
-                <img class="service" src="./assets/images/services-image.png" alt="services-image">
-                <img class="service-mobile" src="./assets/images/services-image-mobile.png" alt="services-image-mobile">
+                <img class="services" src="./assets/images/services-image.png" alt="services-image">
+                <img class="services-mobile" src="./assets/images/services-image-mobile.png"
+                    alt="services-image-mobile">
+                <img class="services-light" src="./assets/images/services-image-light.png" alt="services-image-light">
             </div>
         </section>
 
@@ -274,7 +307,8 @@
         </section>
 
         <footer>
-            <img src="./assets/images/vertacx-logo.png" alt="Vertacx-logo">
+            <img class="logo" src="./assets/images/vertacx-logo.png" alt="Vertacx-logo-Dark">
+            <img class="logo-light" src="./assets/images/vertacx-logo-light.png" alt="Vertacx-logo-Light">
             <p class="footer-content">Vertacx is led by a team with over 20 years of experience in solving real-world
                 challenges and developing
                 software applications for startups and SMEs in Fintech, PropTech, and eCommerce. We focus on creating
@@ -287,18 +321,24 @@
             <div class="social-icons">
                 <a class="icon yt-icon" href="javascript:void(0)"><img src="./assets/images/youtube-logo.png"
                         alt="Facebook"></a>
+                <a class="icon yt-icon-light" href="javascript:void(0)"><img
+                        src="./assets/images/youtube-logo-light.png" alt="Facebook-light"></a>
                 <a class="icon insta-icon" href="javascript:void(0)"><img src="./assets/images/insta-logo.png"
                         alt="Twitter"></a>
+                <a class="icon insta-icon-light" href="javascript:void(0)"><img
+                        src="./assets/images/insta-logo-light.png" alt="Twitter-light"></a>
                 <a class="icon linkedin-icon" href="javascript:void(0)"><img src="./assets/images/linkedin-logo.png"
                         alt="Instagram"></a>
+                <a class="icon linkedin-icon-light" href="javascript:void(0)"><img
+                        src="./assets/images/linkedin-logo-light.png" alt="Instagram-light"></a>
             </div>
             <p class="footer-copy">copyright 2024 &copy; Vertacx</p>
             <p class="address">6A, 4th Floor, GVR complex,<br>
                 Lawson’s road, Contonment, Trichy - 620001.</p class="address">
         </footer>
-        <script href="assets/js/lightmode.js"></script>
-        <script href="assets/js/form.js"></script>
-        <script href="assets/js/main.js"></script>
+        <script src="assets/js/lightmode.js"></script>
+        <script src="assets/js/form.js"></script>
+        <script src="assets/js/main.js"></script>
 </body>
 
 </html>

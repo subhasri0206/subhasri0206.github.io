@@ -17,6 +17,13 @@
     --hamburger-bg: #7DFFAF;
     --hamburger-line: #060F05;
     --hamburger-text: #E5F2E3;
+    --accordian-border-color: #FFFFFF;
+    --accordian-text-color: #E5F2E3;
+    --form-container-bg: #212121;
+    --formcontainer-text: #060F05;
+    --formcontent-bg: #F1F1F1;
+    --form-btn-color: #E5F2E3;
+    --label-color: #060F05;
 }
 
 * {
@@ -64,6 +71,8 @@ nav ul li {
 }
 
 nav ul li a {
+    display: flex;
+    flex-direction: row;
     text-decoration: none;
     font-family: Poppins;
     font-size: 16px;
@@ -81,6 +90,32 @@ nav ul li a:hover {
     display: none;
     flex-direction: column;
     cursor: pointer;
+}
+
+.darkmode {
+    --bg-color: #060F05;
+    --nav-text-color: #E5F2E3;
+    --btn-bg-color: #7DFFAF;
+    --btn-text-color: #060F05;
+    --started-bg-color: #18910D4D;
+    --started-text-color: #E3E3E34D;
+    --started-hover-bg: #18910D;
+    --border-color: #7DFFAF;
+    --card-bg-color: #2C2C2C;
+    --card-heading-color: #E5F2E3;
+    --card-content-color: #E5F2E3;
+    --card-highlight-color: #7DFFAF;
+    --toggle-bg: #F1FAF0;
+    --hamburger-bg: #7DFFAF;
+    --hamburger-line: #060F05;
+    --hamburger-text: #E5F2E3;
+    --accordian-border-color: #FFFFFF;
+    --accordian-text-color: #E5F2E3;
+    --form-container-bg: #212121;
+    --formcontainer-text: #060F05;
+    --formcontent-bg: #F1F1F1;
+    --form-btn-color: #E5F2E3;
+    --label-color: #060F05;
 }
 
 .lightmode {
@@ -101,6 +136,13 @@ nav ul li a:hover {
     --hamburger-bg: #022648;
     --hamburger-line: #F1FAF0;
     --hamburger-text: #060F05;
+    --accordian-border-color: #060F05;
+    --accordian-text-color: #060F05;
+    --form-container-bg: #F1FAF0;
+    --formcontainer-text: #060F05;
+    --formcontent-bg: #022648;
+    --form-btn-color: #022648;
+    --label-color: #FFFFFF;
 }
 
 .toggle-container {
@@ -120,22 +162,17 @@ nav ul li a:hover {
     transition: background-color 0.3s ease;
 }
 
-#theme-switch img:last-child {
+#theme-switch img.moon-icon {
     display: none;
 }
 
-.lightmode #theme-switch img:first-child {
+/* In light mode, show the moon icon and hide the sun icon */
+.lightmode #theme-switch img.sun-icon {
     display: none;
 }
 
-.lightmode #theme-switch img:last-child {
+.lightmode #theme-switch img.moon-icon {
     display: block;
-}
-
-button {
-    background: none;
-    border: none;
-    outline: none;
 }
 
 .icon {
@@ -375,7 +412,7 @@ button {
     line-height: 34px;
     text-align: center;
     color: var(--card-content-color);
-    margin-bottom: 20px;
+    margin: 0px 19.5px 20px 19.5px;
 }
 
 .highlight {
@@ -442,54 +479,66 @@ button {
 }
 
 .accordion {
-    border-radius: 8px;
-    border: 1px solid #333;
-    max-width: 600px;
+    width: 70%;
+    border-radius: 4px;
     margin: auto;
     margin-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .accordion-item {
-    border: 1px solid #333;
-    margin-bottom: 10px;
-    background-color: #111;
+    border: 1px solid var(--accordian-border-color);
 }
 
 .accordion-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 30px 16px;
     cursor: pointer;
-    background-color: #111;
-    font-size: 18px;
 }
 
 .accordion-header h3 {
-    margin: 0;
-    color: #fff;
+    max-width: 254px;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: var(--accordian-text-color);
 }
 
 .accordion-header .arrow {
     transition: transform 0.3s ease;
-    font-size: 24px;
+    font-size: 10px;
+    background-color: var(--btn-bg-color);
+    color: var(--bg-color);
+    padding: 6px 8px;
+    border-radius: 4px;
 }
 
 .accordion-header.active .arrow {
-    transform: rotate(180deg);
-    /* Rotate arrow when content is expanded */
+    transform: rotate(90deg);
 }
 
 .accordion-content {
-    padding: 15px;
-    background-color: #222;
     display: none;
-    /* Hide content by default */
-    border-top: 1px solid #333;
 }
 
 .accordion-content p {
+    max-width: 920px;
     margin: 0;
+    font-family: Poppins !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+    letter-spacing: 0.02em !important;
+    text-align: left;
+    margin-left: 35px;
+    color: var(--accordian-text-color) !important;
 }
 
 .career-btn {
@@ -513,11 +562,11 @@ button {
     margin-bottom: 20px;
 }
 
-.service {
+.services {
     display: block;
 }
 
-.service-mobile {
+.services-mobile {
     display: none;
 }
 
@@ -690,97 +739,19 @@ footer {
 }
 
 .form-container {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
-    max-width: 500px;
-    width: 100%;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.group-col {
-    display: flex;
-    flex-direction: row;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-label {
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    display: block;
-}
-
-input,
-select {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-input:focus,
-select:focus {
-    outline: none;
-    border-color: #333;
-}
-
-.phone-input {
-    display: flex;
-    align-items: center;
-}
-
-.phone-input .flag {
-    margin-right: 0.5rem;
-    font-size: 1.25rem;
-}
-
-button {
-    padding: 0.75rem;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-button:hover {
-    background-color: #333;
-}
-
-.error-message {
-    color: red;
-    font-size: 0.8rem;
-    margin-top: 0.25rem;
-    display: none;
-}
-
-.form-container {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 600px;
-    background: #ffffff;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 715px;
     z-index: 12;
     display: none;
     transition: 0.3s ease-in-out;
+}
+
+.popup-content {
+    max-width: 715px;
+    background-color: var(--formcontent-bg);
 }
 
 .popup-checkbox {
@@ -794,12 +765,275 @@ button:hover {
 
 .close-popup-button {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
+    top: 40px;
+    right: 35px;
+    font-size: 40px;
     cursor: pointer;
 }
 
+#popup-form-content {
+    max-width: 715px;
+    padding: 84px 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--formcontent-bg);
+}
+
+#interest {
+    width: 320px;
+}
+
+#email {
+    width: 260px;
+}
+
+.group-margin {
+    margin-top: 40px;
+}
+
+.group-col {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    color: var(--label-color);
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    background-color: var(--form-container-bg);
+    color: var(--form-btn-color);
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+select {
+    width: 100%;
+    background-color: var(--form-container-bg);
+    color: var(--form-btn-color);
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+option {
+    background-color: var(--form-container-bg);
+    color: var(--form-btn-color);
+}
+
+option:hover {
+    background-color: var(--formcontainer-text);
+}
+
+.phone-input {
+    display: flex;
+    align-items: center;
+}
+
+.form-group p {
+    max-width: 370px;
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 15px;
+    text-align: left;
+    color: var(--label-color);
+}
+
+.form-group:last-child {
+    margin-bottom: 0px;
+}
+
+button {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    background: var(--form-container-bg);
+    color: var(--form-btn-color);
+    padding: 12px 24px;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.logo {
+    display: block;
+}
+
+.logo-light {
+    display: none;
+}
+
+.skills-image {
+    display: block;
+}
+
+.skills-image-light {
+    display: none;
+}
+
+.membership-image {
+    display: block;
+}
+
+.membership-image-light {
+    display: none;
+}
+
+.session-image {
+    display: block;
+}
+
+.session-image-light {
+    display: none;
+}
+
+.idea-icon {
+    display: block;
+}
+
+.idea-icon-light {
+    display: none;
+    margin: 46.38px 79.95px 33.37px 80px;
+}
+
+.services-light {
+    display: none;
+}
+
+.yt-icon {
+    display: block;
+}
+
+.yt-icon-light {
+    display: none;
+    padding: 9px 7px;
+}
+
+.insta-icon {
+    display: block;
+}
+
+.insta-icon-light {
+    display: none;
+    padding: 8px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.linkedin-icon {
+    display: block;
+}
+
+.linkedin-icon-light {
+    display: none;
+    padding: 8px;
+}
+
+@media (prefers-color-scheme: light) {
+    .logo {
+        display: none;
+    }
+
+    .logo-light {
+        display: block;
+    }
+
+    .skills-image {
+        display: none;
+    }
+
+    .skills-image-light {
+        display: block;
+    }
+
+    .membership-image {
+        display: none;
+    }
+
+    .membership-image-light {
+        display: block;
+    }
+
+    .session-image {
+        display: none;
+    }
+
+    .session-image-light {
+        display: block;
+    }
+
+    .idea-icon {
+        display: none;
+    }
+
+    .idea-icon-light {
+        display: block;
+    }
+
+    .services {
+        display: none;
+    }
+
+    .services-mobile {
+        display: none;
+    }
+
+    .services-light {
+        display: block;
+    }
+
+    .yt-icon {
+        display: none;
+    }
+
+    .yt-icon-light {
+        display: block;
+    }
+
+    .insta-icon {
+        display: none;
+    }
+
+    .insta-icon-light {
+        display: block;
+    }
+
+    .linkedin-icon {
+        display: none;
+    }
+
+    .linkedin-icon-light {
+        display: block;
+    }
+}
 
 @media only screen and (max-width: 735px) {
     header {
@@ -834,7 +1068,6 @@ button:hover {
         flex-direction: column;
         list-style-type: none;
         width: 90%;
-        margin-top: 50px;
         font-family: Poppins;
         font-size: 16px;
         font-weight: 400;
@@ -845,6 +1078,7 @@ button:hover {
 
     .nav-list.active {
         display: flex;
+        flex-direction: column;
         color: #ffffff;
     }
 
@@ -853,12 +1087,46 @@ button:hover {
     }
 
     .nav-list li a {
+        display: flex;
+        flex-direction: column;
         text-decoration: none;
         color: var(--nav-text-color);
+        text-align: left;
     }
 
     .nav-list li a:hover {
         color: var(--btn-bg-color);
+    }
+
+    .toggle-container {
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .toggle-container.active {
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+    }
+
+    .darkmode {
+        --bg-color: #060F05;
+        --nav-text-color: #E5F2E3;
+        --btn-bg-color: #7DFFAF;
+        --btn-text-color: #060F05;
+        --started-bg-color: #18910D4D;
+        --started-text-color: #E3E3E34D;
+        --started-hover-bg: #18910D;
+        --border-color: #7DFFAF;
+        --card-bg-color: #2C2C2C;
+        --card-heading-color: #E5F2E3;
+        --card-content-color: #E5F2E3;
+        --card-highlight-color: #7DFFAF;
+        --toggle-bg: #F1FAF0;
+        --hamburger-bg: #7DFFAF;
+        --hamburger-line: #060F05;
+        --hamburger-text: #E5F2E3;
     }
 
     .lightmode {
@@ -876,12 +1144,6 @@ button:hover {
         --card-content-color: #E5F2E3;
         --card-highlight-color: #F1FAF0;
         --toggle-bg: #022648;
-    }
-
-    .toggle-container {
-        display: none;
-        justify-content: center;
-        align-items: center;
     }
 
     #theme-switch {
@@ -1159,10 +1421,10 @@ button:hover {
         justify-content: flex-start;
         align-items: flex-start;
         margin-bottom: 20px;
-        margin-left: 10%;
     }
 
     #how-it-works h2 {
+        margin-left: 10%;
         font-size: 16px;
         line-height: 24px;
         text-align: left;
@@ -1171,6 +1433,7 @@ button:hover {
     }
 
     #how-it-works p {
+        margin-left: 10%;
         max-width: 283px;
         font-size: 20px;
         font-weight: 500;
@@ -1180,55 +1443,70 @@ button:hover {
     }
 
     .accordion {
-        max-width: 90%;
+        width: 90%;
+        border-radius: 4px;
+        margin: auto;
         margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
     }
 
     .accordion-item {
-        margin-bottom: 10px;
-        border: 1px solid #333;
-        border-radius: 5px;
-        background-color: #222;
+        border: 1px solid var(--accordian-border-color);
     }
 
     .accordion-header {
-        padding: 15px;
-        font-size: 1.2em;
-        font-weight: bold;
-        color: #C0FFC0;
         display: flex;
         justify-content: space-between;
-        cursor: pointer;
         align-items: center;
+        padding: 32px 16px;
+        cursor: pointer;
     }
 
-    .accordion-icon {
-        font-size: 1.5em;
-        color: #C0FFC0;
-        transition: transform 0.4s;
+    .accordion-header h3 {
+        max-width: 198px;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: var(--accordian-text-color);
+    }
+
+    .accordion-header .arrow {
+        transition: transform 0.3s ease;
+        font-size: 10px;
+        background-color: var(--btn-bg-color);
+        color: var(--bg-color);
+        padding: 6px 8px;
+        border-radius: 4px;
+    }
+
+    .accordion-header.active .arrow {
+        transform: rotate(90deg);
     }
 
     .accordion-content {
-        padding: 0 20px;
-        background-color: #333;
-        color: #C0FFC0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        display: none;
     }
 
-    .accordion-item.active .accordion-content {
-        max-height: 150px;
-        /* Adjust to fit your content */
-        padding: 20px;
-    }
-
-    .accordion-item.active .accordion-icon {
-        transform: rotate(90deg);
-        /* Rotate the icon */
+    .accordion-content p {
+        max-width: 204px;
+        margin: 0;
+        font-family: Poppins !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        line-height: 24px !important;
+        letter-spacing: 0.02em !important;
+        text-align: left;
+        margin-left: 0px;
+        color: var(--accordian-text-color) !important;
     }
 
     .career-btn {
+        margin-left: 10%;
         background-color: var(--btn-bg-color);
         padding: 13.5px 29.5px;
         font-size: 14px;
@@ -1237,14 +1515,21 @@ button:hover {
         margin-bottom: 24.01px;
     }
 
-    .service {
+    .services {
         display: none;
         align-items: center;
         justify-content: center;
         margin-bottom: 20px;
     }
 
-    .service-mobile {
+    .services-light {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .services-mobile {
         display: flex;
         align-items: center;
         justify-content: center;
