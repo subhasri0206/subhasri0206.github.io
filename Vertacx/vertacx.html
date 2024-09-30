@@ -19,19 +19,15 @@
     <div class="container">
         <header>
             <div>
-                <img class="logo" src="./assets/images/vertacx-logo.png" alt="Vertacx-logo-Dark">
-                <img class="logo-light" src="./assets/images/vertacx-logo-light.png" alt="Vertacx-logo-Light">
+                <img id="logo" class="theme-image" src="./assets/images/vertacx-logo.png"
+                    data-light="./assets/images/vertacx-logo-light.png" alt="Vertacx-logo-Dark">
             </div>
-            <div>
-                <nav>
-                    <ul class="nav-list">
-                        <li><a href="javascript:void(0)">Home</a></li>
-                        <li><a href="#why-vertacx">Why Vertacx</a></li>
-                        <li><a href="#our-programs">Our Programs</a></li>
-                        <li><a href="#how-it-works">How It Works</a></li>
-                        <li><a href="#skills-section">About Us</a></li>
-                    </ul>
-                </nav>
+            <div class="nav-list">
+                <a href="javascript:void(0)">Home</a>
+                <a href="#why-vertacx">Why Vertacx</a>
+                <a href="#our-programs">Our Programs</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#skills-section">About Us</a>
             </div>
             <div class="toggle-container">
                 <button type="button" id="theme-switch">
@@ -39,81 +35,81 @@
                     <img class="icon moon-icon" src="./assets/images/moon-icon.png" alt="moon-icon">
                 </button>
                 <label for="popup-form" class="curriculum-btn">Contact Us</label>
-                <input type="checkbox" id="popup-form" class="popup-checkbox" />
-                <div class="form-container pop-up-content">
-                    <label for="popup-form" class="close-popup-button">&times;</label>
-                    <form id="popup-form-content">
-                        <div class="form-item">
-                            <div class="form-group group-col">
-                                <div class="form-group">
-                                    <label for="interest">WE ARE INTERESTED IN</label>
-                                    <select id="interest" required>
-                                        <option value="">Select an option</option>
-                                        <option value="Option 1">FrontEnd Development</option>
-                                        <option value="Option 2">Backend Development</option>
-                                        <option value="Option 2">AI/ML Development</option>
-                                        <option value="Option 2">LowCode Development</option>
-                                    </select>
-                                    <span class="error-message" id="interestError"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label for="weAre">WE ARE</label>
-                                    <select id="weAre" required>
-                                        <option value="">Select an option</option>
-                                        <option value="Option 1">Part Time</option>
-                                        <option value="Option 2">Full Time</option>
-                                        <option value="Option 2">Permanent</option>
-                                    </select>
-                                    <span class="error-message" id="weAreError"></span>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="stage">WHAT STAGE ARE YOU AT</label>
-                                <select id="stage" required>
-                                    <option value="">Select an option</option>
-                                    <option value="Stage 1">Beginner</option>
-                                    <option value="Stage 2">Intermediate</option>
-                                    <option value="Stage 2">Expert</option>
-                                </select>
-                                <span class="error-message" id="stageError"></span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="name">YOUR NAME</label>
-                                <input type="text" id="name" placeholder="First Middle Last" required>
-                                <span class="error-message" id="nameError"></span>
-                            </div>
-
-                            <div class="form-group group-col">
-                                <div class="form-group">
-                                    <label for="email">YOUR EMAIL</label>
-                                    <input type="email" id="email" placeholder="email@email.com" required>
-                                    <span class="error-message" id="emailError"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">YOUR PHONE</label>
-                                    <div class="phone-input">
-                                        <input type="tel" id="phone" placeholder="+91" required>
-                                    </div>
-                                    <span class="error-message" id="phoneError"></span>
-                                </div>
-                            </div>
-
-                            <div class="form-group group-col group-margin">
-                                <p>This form collects your contact information so that we can correspond with you. Check
-                                    out
-                                    our privacy policy to protect and manage your data.</p>
-                                <button type="submit">Submit ➔</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
             </div>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
+            </div>
+            <input type="checkbox" id="popup-form" class="popup-checkbox" />
+            <div class="form-container pop-up-content">
+                <label for="popup-form" class="close-popup-button">&times;</label>
+                <form id="popup-form-content">
+                    <div class="form-item">
+                        <div class="form-group group-col">
+                            <div class="form-group">
+                                <label for="interest">WE ARE INTERESTED IN</label>
+                                <select id="interest" required>
+                                    <option value="">Select an option</option>
+                                    <option value="Option 1">FrontEnd Development</option>
+                                    <option value="Option 2">Backend Development</option>
+                                    <option value="Option 2">AI/ML Development</option>
+                                    <option value="Option 2">LowCode Development</option>
+                                </select>
+                                <span class="error-message" id="interestError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="weAre">WE ARE</label>
+                                <select id="weAre" required>
+                                    <option value="">Select an option</option>
+                                    <option value="Option 1">Part Time</option>
+                                    <option value="Option 2">Full Time</option>
+                                    <option value="Option 2">Permanent</option>
+                                </select>
+                                <span class="error-message" id="weAreError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stage">WHAT STAGE ARE YOU AT</label>
+                            <select id="stage" required>
+                                <option value="">Select an option</option>
+                                <option value="Stage 1">Beginner</option>
+                                <option value="Stage 2">Intermediate</option>
+                                <option value="Stage 2">Expert</option>
+                            </select>
+                            <span class="error-message" id="stageError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">YOUR NAME</label>
+                            <input type="text" id="name" placeholder="First Middle Last" required>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group group-col">
+                            <div class="form-group">
+                                <label for="email">YOUR EMAIL</label>
+                                <input type="email" id="email" placeholder="email@email.com" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">YOUR PHONE</label>
+                                <div class="phone-input">
+                                    <input type="tel" id="phone" placeholder="+91" required>
+                                </div>
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group group-col group-margin">
+                            <p>This form collects your contact information so that we can correspond with you. Check
+                                out
+                                our privacy policy to protect and manage your data.</p>
+                            <button type="submit">Submit ➔</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </header>
 
@@ -133,25 +129,22 @@
             <h4>Vertacx adopts a radically human approach to upskilling students and graduates.</h4>
             <div class="features-block">
                 <div class="feature feature-skills">
-                    <img class="skills-image" src="./assets/images/skills-image.png" alt="skills-image">
-                    <img class="skills-image-light" src="./assets/images/skills-image-light.png"
-                        alt="skills-image-light">
+                    <img id="skills-image" class="theme-image" src="./assets/images/skills-image.png"
+                        data-light="./assets/images/skills-image-light.png" alt="skills-image">
                     <h3>Bundled Soft Skills</h3>
                     <h5>Vertacx offers agile-based learning programs led by industry mentors, focusing an comprehensive
                         software engineering skills and essential soft skills in a work-like environment</h5>
                 </div>
                 <div class="feature feature-membership">
-                    <img class="membership-image" src="./assets/images/membership-image.png" alt="membership-image">
-                    <img class="membership-image-light" src="./assets/images/membership-image-light.png"
-                        alt="membership-image-light">
+                    <img id="membership-image" class="theme-image" src="./assets/images/membership-image.png"
+                        data-light="./assets/images/membership-image-light.png" alt="membership-image">
                     <h3>1-on-1 Mentorship</h3>
                     <h5>Vertacx collaborates with tech companies to offer Industry- relevant training and 1-on-1
                         mentorship, along with real-world projects and Internships.</h5>
                 </div>
                 <div class="feature feature-session">
-                    <img class="session-image" src="./assets/images/session-image.png" alt="session-image">
-                    <img class="session-image-light" src="./assets/images/session-image-light.png"
-                        alt="session-image-light">
+                    <img id="session-image" class="theme-image" src="./assets/images/session-image.png"
+                        data-light="./assets/images/session-image-light.png" alt="session-image">
                     <h3>Interactive Sessions</h3>
                     <h5>No lecture hall here. We blend role-playing, hands-on exersises, and diverse interactive content
                         for a highly impactful learning experience.</h5>
@@ -164,9 +157,8 @@
             <div class="program-cards">
                 <div class="card">
                     <div>
-                        <img class="idea-icon" src="assets/images/idea-image.png" alt="Lightbulb-icon">
-                        <img class="idea-icon-light" src="assets/images/idea-image-light.png"
-                            alt="Lightbulb-icon-Light">
+                        <img id="idea-icon1" class="theme-image" src="assets/images/idea-image.png"
+                            data-light="assets/images/idea-image-light.png" alt="Lightbulb-icon">
                     </div>
                     <h3 class="card-heading">Makers Nest</h3>
                     <p class="card-content">Makers Nest simulates a full-time job by immersing participants in an office
@@ -178,9 +170,8 @@
 
                 <div class="card">
                     <div>
-                        <img class="idea-icon" src="assets/images/idea-image.png" alt="Lightbulb-icon">
-                        <img class="idea-icon-light" src="assets/images/idea-image-light.png"
-                            alt="Lightbulb-icon-Light">
+                        <img id="idea-icon2" class="theme-image" src="assets/images/idea-image.png"
+                            data-light="assets/images/idea-image-light.png" alt="Lightbulb-icon">
                     </div>
                     <h3 class="card-heading">Lorem Ipsum</h3>
                     <p class="card-content">Makers Nest simulates a full-time job by immersing participants in an office
@@ -192,9 +183,8 @@
 
                 <div class="card">
                     <div>
-                        <img class="idea-icon" src="assets/images/idea-image.png" alt="Lightbulb-icon">
-                        <img class="idea-icon-light" src="assets/images/idea-image-light.png"
-                            alt="Lightbulb-icon-Light">
+                        <img id="idea-icon3" class="theme-image" src="assets/images/idea-image.png"
+                            data-light="assets/images/idea-image-light.png" alt="Lightbulb-icon">
                     </div>
                     <h3 class="card-heading">Lorem Ipsum</h3>
                     <p class="card-content">Makers Nest simulates a full-time job by immersing participants in an office
@@ -285,10 +275,10 @@
 
         <section id="service">
             <div>
-                <img class="services" src="./assets/images/services-image.png" alt="services-image">
+                <img id="services" class="theme-image" src="./assets/images/services-image.png"
+                    data-light="./assets/images/services-image-light.png" alt="services-image">
                 <img class="services-mobile" src="./assets/images/services-image-mobile.png"
-                    alt="services-image-mobile">
-                <img class="services-light" src="./assets/images/services-image-light.png" alt="services-image-light">
+                    data-light-mobile="./assets/images/services-image-light-mobile.png" alt="services-image-mobile">
             </div>
         </section>
 
@@ -307,8 +297,8 @@
         </section>
 
         <footer>
-            <img class="logo" src="./assets/images/vertacx-logo.png" alt="Vertacx-logo-Dark">
-            <img class="logo-light" src="./assets/images/vertacx-logo-light.png" alt="Vertacx-logo-Light">
+            <img id="logo-bottom" class="theme-image" src="./assets/images/vertacx-logo.png"
+                data-light="./assets/images/vertacx-logo-light.png" alt="Vertacx-logo-Dark">
             <p class="footer-content">Vertacx is led by a team with over 20 years of experience in solving real-world
                 challenges and developing
                 software applications for startups and SMEs in Fintech, PropTech, and eCommerce. We focus on creating
@@ -319,20 +309,17 @@
                 <input type="checkbox" id="popup-form" class="popup-checkbox" />
             </section>
             <div class="social-icons">
-                <a class="icon yt-icon" href="javascript:void(0)"><img src="./assets/images/youtube-logo.png"
-                        alt="Facebook"></a>
-                <a class="icon yt-icon-light" href="javascript:void(0)"><img
-                        src="./assets/images/youtube-logo-light.png" alt="Facebook-light"></a>
-                <a class="icon insta-icon" href="javascript:void(0)"><img src="./assets/images/insta-logo.png"
-                        alt="Twitter"></a>
-                <a class="icon insta-icon-light" href="javascript:void(0)"><img
-                        src="./assets/images/insta-logo-light.png" alt="Twitter-light"></a>
-                <a class="icon linkedin-icon" href="javascript:void(0)"><img src="./assets/images/linkedin-logo.png"
+                <a class="icons-social youtube" href="javascript:void(0)"><img id="yt-icon" class="theme-image"
+                        src="./assets/images/youtube-logo.png" data-light="./assets/images/youtube-logo-light.png"
+                        alt="Youtube"></a>
+                <a class="icons-social insta" href="javascript:void(0)"><img id="insta-icon" class="theme-image"
+                        src="./assets/images/insta-logo.png" data-light="./assets/images/insta-logo-light.png"
                         alt="Instagram"></a>
-                <a class="icon linkedin-icon-light" href="javascript:void(0)"><img
-                        src="./assets/images/linkedin-logo-light.png" alt="Instagram-light"></a>
+                <a class="icons-social linkedin" href="javascript:void(0)"><img id="linkedin-icon" class="theme-image"
+                        src="./assets/images/linkedin-logo.png" data-light="./assets/images/linkedin-logo-light.png"
+                        alt="LinkedIn"></a>
             </div>
-            <p class="footer-copy">copyright 2024 &copy; Vertacx</p>
+            <p class=" footer-copy">copyright 2024 &copy; Vertacx</p>
             <p class="address">6A, 4th Floor, GVR complex,<br>
                 Lawson’s road, Contonment, Trichy - 620001.</p class="address">
         </footer>

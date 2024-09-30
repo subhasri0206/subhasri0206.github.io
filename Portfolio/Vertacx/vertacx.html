@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="title" content="vertacX">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Transform Your Future with Industry-ready skills" />
+    <meta name="keywords" content="web development, academy, career build, Workplace skills, Essential soft skills">
+    <meta property="og:title" content="vertacX">
+    <meta property="og:description" content="Transform Your Future with Industry-ready skills">
+    <meta property="og:image" content="./assets/images/vertacx-og-image.png">
+    <link rel="icon" type="image/png" href="./assets/images/vertacx-icon.png">
+    <title>vertacX</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="darkmode">
+    <div class="container">
+        <header>
+            <div>
+                <img id="logo" class="theme-image" src="./assets/images/vertacx-logo.png"
+                    data-light="./assets/images/vertacx-logo-light.png" alt="Vertacx-logo-Dark">
+            </div>
+            <div class="nav-list">
+                <a href="javascript:void(0)">Home</a>
+                <a href="#why-vertacx">Why Vertacx</a>
+                <a href="#our-programs">Our Programs</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#skills-section">About Us</a>
+            </div>
+            <div class="toggle-container">
+                <button type="button" id="theme-switch">
+                    <img class="icon sun-icon" src="./assets/images/sun-icon.png" alt="sun-icon">
+                    <img class="icon moon-icon" src="./assets/images/moon-icon.png" alt="moon-icon">
+                </button>
+                <label for="popup-form" class="curriculum-btn">Contact Us</label>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <input type="checkbox" id="popup-form" class="popup-checkbox" />
+            <div class="form-container pop-up-content">
+                <label for="popup-form" class="close-popup-button">&times;</label>
+                <form id="popup-form-content">
+                    <div class="form-item">
+                        <div class="form-group group-col">
+                            <div class="form-group">
+                                <label for="interest">WE ARE INTERESTED IN</label>
+                                <select id="interest" required>
+                                    <option value="">Select an option</option>
+                                    <option value="Option 1">FrontEnd Development</option>
+                                    <option value="Option 2">Backend Development</option>
+                                    <option value="Option 2">AI/ML Development</option>
+                                    <option value="Option 2">LowCode Development</option>
+                                </select>
+                                <span class="error-message" id="interestError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="weAre">WE ARE</label>
+                                <select id="weAre" required>
+                                    <option value="">Select an option</option>
+                                    <option value="Option 1">Part Time</option>
+                                    <option value="Option 2">Full Time</option>
+                                    <option value="Option 2">Permanent</option>
+                                </select>
+                                <span class="error-message" id="weAreError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="stage">WHAT STAGE ARE YOU AT</label>
+                            <select id="stage" required>
+                                <option value="">Select an option</option>
+                                <option value="Stage 1">Beginner</option>
+                                <option value="Stage 2">Intermediate</option>
+                                <option value="Stage 2">Expert</option>
+                            </select>
+                            <span class="error-message" id="stageError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">YOUR NAME</label>
+                            <input type="text" id="name" placeholder="First Middle Last" required>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group group-col">
+                            <div class="form-group">
+                                <label for="email">YOUR EMAIL</label>
+                                <input type="email" id="email" placeholder="email@email.com" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">YOUR PHONE</label>
+                                <div class="phone-input">
+                                    <input type="tel" id="phone" placeholder="+91" required>
+                                </div>
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group group-col group-margin">
+                            <p>This form collects your contact information so that we can correspond with you. Check
+                                out
+                                our privacy policy to protect and manage your data.</p>
+                            <button type="submit">Submit ➔</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1>Transform Your Future with Industry-ready Skills</h1>
+            <p>At Vertacx, we deliver personalized, actionable learning in a real-world software company to develop
+                industry-ready software engineers.</p>
+            <div class="cta-buttons">
+                <label for="popup-form" class="curriculum-btn demo-btn">Book Your Free Consultation</label>
+                <input type="checkbox" id="popup-form" class="popup-checkbox" />
+            </div>
+        </section>
+
+        <section id="why-vertacx">
+            <h2>Why Vertacx</h2>
+            <p>If you’re looking to build a resilient career-you’ve come to the right place.</p>
+            <h4>Vertacx adopts a radically human approach to upskilling students and graduates.</h4>
+            <div class="features-block">
+                <div class="feature feature-skills">
+                    <img id="skills-image" class="theme-image" src="./assets/images/skills-image.png"
+                        data-light="./assets/images/skills-image-light.png" alt="skills-image">
+                    <h3>Bundled Soft Skills</h3>
+                    <h5>Vertacx offers agile-based learning programs led by industry mentors, focusing an comprehensive
+                        software engineering skills and essential soft skills in a work-like environment</h5>
+                </div>
+                <div class="feature feature-membership">
+                    <img id="membership-image" class="theme-image" src="./assets/images/membership-image.png"
+                        data-light="./assets/images/membership-image-light.png" alt="membership-image">
+                    <h3>1-on-1 Mentorship</h3>
+                    <h5>Vertacx collaborates with tech companies to offer Industry- relevant training and 1-on-1
+                        mentorship, along with real-world projects and Internships.</h5>
+                </div>
+                <div class="feature feature-session">
+                    <img id="session-image" class="theme-image" src="./assets/images/session-image.png"
+                        data-light="./assets/images/session-image-light.png" alt="session-image">
+                    <h3>Interactive Sessions</h3>
+                    <h5>No lecture hall here. We blend role-playing, hands-on exersises, and diverse interactive content
+                        for a highly impactful learning experience.</h5>
+                </div>
+            </div>
+        </section>
+
+        <section id="our-programs">
+            <h2>Our Programs</h2>
+            <div class="program-cards">
+                <div class="card">
+                    <div>
+                        <img id="idea-icon1" class="theme-image" src="assets/images/idea-image.png"
+                            data-light="assets/images/idea-image-light.png" alt="Lightbulb-icon">
+                    </div>
+                    <h3 class="card-heading">Makers Nest</h3>
+                    <p class="card-content">Makers Nest simulates a full-time job by immersing participants in an office
+                        environment,
+                        allowing trainees to experience workplace realities firsthand while undergoing training in
+                        frontend or backend engineering.</p>
+                    <p class="highlight">Designed for freshers and graduates.</p>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img id="idea-icon2" class="theme-image" src="assets/images/idea-image.png"
+                            data-light="assets/images/idea-image-light.png" alt="Lightbulb-icon">
+                    </div>
+                    <h3 class="card-heading">Lorem Ipsum</h3>
+                    <p class="card-content">Makers Nest simulates a full-time job by immersing participants in an office
+                        environment,
+                        allowing trainees to experience workplace realities firsthand while undergoing training in
+                        frontend or backend engineering.</p>
+                    <p class="highlight">Designed for freshers and graduates.</p>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <img id="idea-icon3" class="theme-image" src="assets/images/idea-image.png"
+                            data-light="assets/images/idea-image-light.png" alt="Lightbulb-icon">
+                    </div>
+                    <h3 class="card-heading">Lorem Ipsum</h3>
+                    <p class="card-content">Makers Nest simulates a full-time job by immersing participants in an office
+                        environment,
+                        allowing trainees to experience workplace realities firsthand while undergoing training in
+                        frontend or backend engineering.</p>
+                    <p class="highlight">Designed for freshers and graduates.</p>
+                </div>
+            </div>
+            <div class="controls">
+                <p class="control" onclick="activateControl(this)"></p>
+                <p class="control" onclick="activateControl(this)"></p>
+            </div>
+        </section>
+
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+            <p>Personalized learning at scale.</p>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>1. Career Assessments</h3>
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab est modi ex eos ipsam expedita,
+                            alias optio tempore quis repellendus perferendis eveniet deserunt sunt exercitationem error
+                            quaerat atque soluta iure ea ducimus vitae ipsa velit adipisci? Rem dignissimos dolores,
+                            aperiam doloribus porro ullam magni, exercitationem placeat omnis nesciunt minima rerum!</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>2. Program Onboarding</h3>
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab est modi ex eos ipsam expedita,
+                            alias optio tempore quis repellendus perferendis eveniet deserunt sunt exercitationem error
+                            quaerat atque soluta iure ea ducimus vitae ipsa velit adipisci? Rem dignissimos dolores,
+                            aperiam doloribus porro ullam magni, exercitationem placeat omnis nesciunt minima rerum!</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>3. Learning Sprint and Retrospective</h3>
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab est modi ex eos ipsam expedita,
+                            alias optio tempore quis repellendus perferendis eveniet deserunt sunt exercitationem error
+                            quaerat atque soluta iure ea ducimus vitae ipsa velit adipisci? Rem dignissimos dolores,
+                            aperiam doloribus porro ullam magni, exercitationem placeat omnis nesciunt minima rerum!</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>4. Capstone Project</h3>
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab est modi ex eos ipsam expedita,
+                            alias optio tempore quis repellendus perferendis eveniet deserunt sunt exercitationem error
+                            quaerat atque soluta iure ea ducimus vitae ipsa velit adipisci? Rem dignissimos dolores,
+                            aperiam doloribus porro ullam magni, exercitationem placeat omnis nesciunt minima rerum!</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>5. Internship</h3>
+                        <span class="arrow">&#9654;</span>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab est modi ex eos ipsam expedita,
+                            alias optio tempore quis repellendus perferendis eveniet deserunt sunt exercitationem error
+                            quaerat atque soluta iure ea ducimus vitae ipsa velit adipisci? Rem dignissimos dolores,
+                            aperiam doloribus porro ullam magni, exercitationem placeat omnis nesciunt minima rerum!</p>
+                    </div>
+                </div>
+            </div>
+            <label for="popup-form" class="curriculum-btn career-btn">Get a Career Assessment</label>
+            <input type="checkbox" id="popup-form" class="popup-checkbox" />
+        </section>
+
+        <section id="service">
+            <div>
+                <img id="services" class="theme-image" src="./assets/images/services-image.png"
+                    data-light="./assets/images/services-image-light.png" alt="services-image">
+                <img class="services-mobile" src="./assets/images/services-image-mobile.png"
+                    data-light-mobile="./assets/images/services-image-light-mobile.png" alt="services-image-mobile">
+            </div>
+        </section>
+
+        <section id="skills-section">
+            <div class="skills-section">
+                <h3 class="skills-heading3">Workplace skills that boost employability</h3>
+                <p class="skills-paratop">For the modern employee, technical skills are only part of the equation. Our
+                    programs focus on the <span>essential soft skills</span> employees need to be the next generation of
+                    leaders.</p>
+                <h5 class="skills-heading5">Essential soft skills include:</h5>
+                <p class="skills-parabottom">Communication, critical thinking, emotional intelligence, collaboration,
+                    leadership, conflict
+                    management,
+                    feedback, problem solving, inclusion, change management, empathy, resilience and more.</p>
+            </div>
+        </section>
+
+        <footer>
+            <img id="logo-bottom" class="theme-image" src="./assets/images/vertacx-logo.png"
+                data-light="./assets/images/vertacx-logo-light.png" alt="Vertacx-logo-Dark">
+            <p class="footer-content">Vertacx is led by a team with over 20 years of experience in solving real-world
+                challenges and developing
+                software applications for startups and SMEs in Fintech, PropTech, and eCommerce. We focus on creating
+                industry-ready professionals by honing both technical and soft skills.</p>
+            <section id="experts-section">
+                <p class="experts-para">Learn how personalized learning can transform your organization.</p>
+                <label for="popup-form" class="curriculum-btn expert-btn">Get In Touch</label>
+                <input type="checkbox" id="popup-form" class="popup-checkbox" />
+            </section>
+            <div class="social-icons">
+                <a class="icons-social youtube" href="javascript:void(0)"><img id="yt-icon" class="theme-image"
+                        src="./assets/images/youtube-logo.png" data-light="./assets/images/youtube-logo-light.png"
+                        alt="Youtube"></a>
+                <a class="icons-social insta" href="javascript:void(0)"><img id="insta-icon" class="theme-image"
+                        src="./assets/images/insta-logo.png" data-light="./assets/images/insta-logo-light.png"
+                        alt="Instagram"></a>
+                <a class="icons-social linkedin" href="javascript:void(0)"><img id="linkedin-icon" class="theme-image"
+                        src="./assets/images/linkedin-logo.png" data-light="./assets/images/linkedin-logo-light.png"
+                        alt="LinkedIn"></a>
+            </div>
+            <p class=" footer-copy">copyright 2024 &copy; Vertacx</p>
+            <p class="address">6A, 4th Floor, GVR complex,<br>
+                Lawson’s road, Contonment, Trichy - 620001.</p class="address">
+        </footer>
+        <script src="assets/js/lightmode.js"></script>
+        <script src="assets/js/form.js"></script>
+        <script src="assets/js/main.js"></script>
+</body>
+
+</html>
