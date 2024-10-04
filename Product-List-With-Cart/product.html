@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Preview a Product List With Cart" />
+    <meta name="keywords" content="HTML, tags, web development, card" />
+    <meta property="og:title" content=">Product List With Cart">
+    <meta property="og:description" content="Preview a Product List With Cart">
+    <link rel="icon" type="image/x-icon" href="assets/images/shopping-icon.png">
+    <title>Product List With Cart</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Shopping Cart</h1>
+            <div class="cart-icon">
+                <span>Cart (<span id="cart-count">0</span>)</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Product Section (Left) -->
+            <div class="product-list">
+                <div class="product" data-id="1">
+                    <img src="product1.jpg" alt="Product 1">
+                    <h3>Product 1</h3>
+                    <p>$10.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                    <div class="quantity-control" style="display: none;">
+                        <button class="decrease-quantity">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increase-quantity">+</button>
+                    </div>
+                </div>
+                <div class="product-list">
+                    <div class="product" data-id="2">
+                        <img src="product1.jpg" alt="Product 2">
+                        <h3>Product 2</h3>
+                        <p>$10.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                        <div class="quantity-control" style="display: none;">
+                            <button class="decrease-quantity">-</button>
+                            <span class="quantity">1</span>
+                            <button class="increase-quantity">+</button>
+                        </div>
+                    </div>
+                    <!-- Repeat for other products -->
+                </div>
+
+                <!-- Cart Section (Right) -->
+                <div class="cart-section">
+                    <img src="cart-empty.png" alt="Empty Cart">
+                    <p>Your added items will show here.</p>
+                    <div class="cart-items"></div>
+                    <div class="cart-summary" style="display: none;">
+                        <p>Order Total: $<span id="total-price">0</span></p>
+                        <button id="confirm-order">Confirm Order</button>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <!-- Order Confirmation Page -->
+    <div class="order-confirmation" style="display: none;">
+        <h2>Order Confirmed!</h2>
+        <div class="confirmed-items"></div>
+        <p>Order Total: $<span id="confirmed-total">0</span></p>
+        <button id="start-new-order">Start New Order</button>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
