@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    --theme1-bg-color: #3A4663;
+    --theme2-bg-color: #E6E6E6;
+    --theme3-bg-color: #17062A;
+    --theme1-display-bg: #181F33;
+    --theme1-content-bg: #242D44;
+    --theme2-display-bg: #EEEEEE;
+    --theme2-content-bg: #D2CDCD;
+    --theme3-display-bg: #1E0936;
+    --theme3-content-bg: #1E0936;
+    --theme1-num-bg: #EAE3DC;
+    --theme1-del-bg: #647198;
+    --theme1-equals-bg: #D03F2F;
+    --theme2-num-bg: #E5E4E1;
+    --theme2-del-bg: #378187;
+    --theme2-equals-bg: #C85402;
+    --theme3-num-bg: #331C4D;
+    --theme3-del-bg: #56077C;
+    --theme3-equals-bg: #00DED0;
+    --theme1-num-hover-bg: #FFFFFE;
+    --theme1-del-hover-bg: #A2B2E1;
+    --theme1-equals-hover-bg: #F96B5B;
+    --theme2-num-hover-bg: #FFFFFF;
+    --theme2-del-hover-bg: #62B5BC;
+    --theme2-equals-hover-bg: #FF8A38;
+    --theme3-num-hover-bg: #6C34AC;
+    --theme3-del-hover-bg: #8631AF;
+    --theme3-equals-hover-bg: #93FFF8;
+    --theme1-display-text: #FFFFFF;
+    --theme2-display-text: #36362C;
+    --theme3-display-text: #FFE53D;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.header {
+    width: 540px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 32px;
+}
+
+.header h1 {
+    font-family: League Spartan;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 29.44px;
+    letter-spacing: -0.53px;
+    text-align: center;
+}
+
+.display {
+    width: 540px;
+    text-align: right;
+    margin-bottom: 24px;
+}
+
+.theme-toggle-slider {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    font-family: League Spartan;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 11.04px;
+    letter-spacing: 1px;
+    text-align: center;
+
+}
+
+.theme-toggle-slider h5 {
+    margin-right: 26px;
+}
+
+#themeSlider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 71px;
+    height: 26px;
+    border-radius: 13px;
+    outline: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#themeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 51px;
+}
+
+.labels span {
+    font-family: League Spartan;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 13.44px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#calc-display {
+    width: 100%;
+    height: 128px;
+    border: none;
+    padding-right: 32px;
+    font-family: League Spartan;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 51.52px;
+    letter-spacing: -0.9333333373069763px;
+    text-align: right;
+    border-radius: 10px;
+}
+
+.buttons {
+    width: 540px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#num {
+    font-family: League Spartan;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 36.8px;
+    letter-spacing: -0.6666666865348816px;
+    text-align: center;
+    width: 101px;
+    height: 64px;
+    padding: 13px 13px 11px 14px;
+}
+
+#del {
+    font-family: League Spartan;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 25.76px;
+    letter-spacing: -0.46666666865348816px;
+    text-align: center;
+    width: 101px;
+    height: 64px;
+    padding: 13px 13px 11px 14px;
+}
+
+#reset {
+    grid-column: span 2;
+    font-family: League Spartan;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 25.76px;
+    letter-spacing: -0.46666666865348816px;
+    text-align: center;
+    height: 64px;
+    padding: 13px 29px 11px 32px;
+}
+
+#equals {
+    grid-column: span 2;
+    font-family: League Spartan;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 25.76px;
+    letter-spacing: -0.46666666865348816px;
+    text-align: center;
+    height: 64px;
+    padding: 13px 29px 11px 32px;
+}
+
+body.theme1 {
+    background-color: var(--theme1-bg-color);
+}
+
+.theme1 .buttons {
+    background-color: var(--theme1-content-bg);
+    padding: 32px;
+    border-radius: 10px;
+}
+
+.theme1 .header h1 {
+    color: var(--theme1-display-text);
+}
+
+.theme1 .theme-toggle-slider {
+    color: var(--theme1-display-text);
+}
+
+.theme1 .labels span {
+    color: var(--theme1-display-text);
+}
+
+.theme1 #calc-display {
+    background-color: var(--theme1-display-bg);
+    color: var(--theme1-display-text);
+}
+
+.theme1 #num {
+    background-color: var(--theme1-num-bg);
+    box-shadow: 0px -4px 0px 0px #B3A497 inset;
+    color: #434A59;
+}
+
+.theme1 #num:hover {
+    background-color: var(--theme1-num-hover-bg);
+}
+
+.theme1 #del {
+    background-color: var(--theme1-del-bg);
+    color: #FFFFFF;
+    box-shadow: 0px -4px 0px 0px #414E73 inset;
+}
+
+.theme1 #del:hover {
+    background-color: var(--theme1-del-hover-bg);
+}
+
+.theme1 #reset {
+    background-color: var(--theme1-del-bg);
+    color: #FFFFFF;
+    box-shadow: 0px -4px 0px 0px #414E73 inset;
+}
+
+.theme1 #reset:hover {
+    background-color: var(--theme1-del-hover-bg);
+}
+
+.theme1 #equals {
+    background-color: var(--theme1-equals-bg);
+    color: #FFFFFF;
+    box-shadow: 0px -4px 0px 0px #93261A inset;
+}
+
+.theme1 #equals:hover {
+    background-color: var(--theme1-equals-hover-bg);
+}
+
+.theme1 #themeSlider {
+    background-color: var(--theme1-content-bg);
+}
+
+.theme1 #themeSlider::-webkit-slider-thumb {
+    background-color: var(--theme1-equals-bg);
+}
+
+/* Theme 2 */
+body.theme2 {
+    background-color: var(--theme2-bg-color);
+}
+
+.theme2 .buttons {
+    background-color: var(--theme2-content-bg);
+    padding: 32px;
+    border-radius: 10px;
+}
+
+.theme2 .header h1 {
+    color: var(--theme2-display-text);
+}
+
+.theme2 .theme-toggle-slider {
+    color: var(--theme2-display-text);
+}
+
+.theme2 .labels span {
+    color: var(--theme2-display-text);
+}
+
+.theme2 #calc-display {
+    background-color: var(--theme2-display-bg);
+    color: var(--theme2-display-text);
+}
+
+.theme2 #num {
+    background-color: var(--theme2-num-bg);
+    box-shadow: 0px -4px 0px 0px #A79E91 inset;
+    color: #36362C;
+}
+
+.theme2 #num:hover {
+    background-color: var(--theme2-num-hover-bg);
+}
+
+.theme2 #del {
+    background-color: var(--theme2-del-bg);
+    color: #FFFFFF;
+    box-shadow: 0px -4px 0px 0px #1B6066 inset;
+}
+
+.theme2 #del:hover {
+    background-color: var(--theme2-del-hover-bg);
+}
+
+.theme2 #reset {
+    background-color: var(--theme2-del-bg);
+    color: #FFFFFF;
+    box-shadow: 0px -4px 0px 0px #1B6066 inset;
+}
+
+.theme2 #reset:hover {
+    background-color: var(--theme2-del-hover-bg);
+}
+
+.theme2 #equals {
+    background-color: var(--theme2-equals-bg);
+    color: #FFFFFF;
+    box-shadow: 0px -4px 0px 0px #873901 inset;
+}
+
+.theme2 #equals:hover {
+    background-color: var(--theme2-equals-hover-bg);
+}
+
+.theme2 #themeSlider {
+    background-color: var(--theme2-content-bg);
+}
+
+.theme2 #themeSlider::-webkit-slider-thumb {
+    background-color: var(--theme2-equals-bg);
+}
+
+/* Theme 3 */
+body.theme3 {
+    background-color: var(--theme3-bg-color);
+}
+
+.theme3 .buttons {
+    background-color: var(--theme3-content-bg);
+    padding: 32px;
+    border-radius: 10px;
+}
+
+.theme3 .header h1 {
+    color: var(--theme3-display-text);
+}
+
+.theme3 .theme-toggle-slider {
+    color: var(--theme3-display-text);
+}
+
+.theme3 .labels span {
+    color: var(--theme3-display-text);
+}
+
+.theme3 #calc-display {
+    background-color: var(--theme3-display-bg);
+    color: var(--theme3-display-text);
+}
+
+.theme3 #num {
+    background-color: var(--theme3-num-bg);
+    box-shadow: 0px -4px 0px 0px #881C9E inset;
+    color: #FFE53D;
+}
+
+.theme3 #num:hover {
+    background-color: var(--theme3-num-hover-bg);
+}
+
+.theme3 #del {
+    background-color: var(--theme3-del-bg);
+    color: #FFFFFF;
+    box-shadow: 0px -4px 0px 0px #BE15F4 inset;
+}
+
+.theme3 #del:hover {
+    background-color: var(--theme3-del-hover-bg);
+}
+
+.theme3 #reset {
+    background-color: var(--theme3-del-bg);
+    color: #FFFFFF;
+    box-shadow: 0px -4px 0px 0px #BE15F4 inset;
+}
+
+.theme3 #reset:hover {
+    background-color: var(--theme3-del-hover-bg);
+}
+
+.theme3 #equals {
+    background-color: var(--theme3-equals-bg);
+    color: #1A2327;
+    box-shadow: 0px -4px 0px 0px #6CF9F1 inset;
+}
+
+.theme3 #equals:hover {
+    background-color: var(--theme3-equals-hover-bg);
+}
+
+.theme3 #themeSlider {
+    background-color: var(--theme3-content-bg);
+}
+
+.theme3 #themeSlider::-webkit-slider-thumb {
+    background-color: var(--theme3-equals-bg);
+}
+
+
+@media (max-width: 735px) {
+    .header {
+        width: 347px;
+    }
+
+    .display {
+        width: 347px;
+    }
+
+    #calc-display {
+        width: 347px;
+        height: 88px;
+        border: none;
+        padding-right: 32px;
+        border-radius: 10px;
+        font-size: 40px;
+        line-height: 36.8px;
+        letter-spacing: -0.6666666865348816px;
+    }
+
+    .buttons {
+        width: 347px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 13px;
+    }
+
+    button {
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    #num {
+        width: 60px;
+        height: 64px;
+        padding: 13px 13px 11px 14px;
+        font-size: 32px;
+        line-height: 29.44px;
+        letter-spacing: -0.5333333611488342px;
+    }
+
+    #del {
+        width: 60px;
+        height: 64px;
+        padding: 13px 13px 11px 14px;
+        font-size: 20px;
+        line-height: 18.4px;
+        letter-spacing: -0.3333333432674408px;
+    }
+
+    #reset {
+        grid-column: span 2;
+        height: 64px;
+        padding: 13px 29px 11px 32px;
+        font-size: 20px;
+        line-height: 18.4px;
+        letter-spacing: -0.3333333432674408px;
+    }
+
+    #equals {
+        grid-column: span 2;
+        height: 64px;
+        padding: 13px 29px 11px 32px;
+        font-size: 20px;
+        line-height: 18.4px;
+        letter-spacing: -0.3333333432674408px;
+    }
+}
