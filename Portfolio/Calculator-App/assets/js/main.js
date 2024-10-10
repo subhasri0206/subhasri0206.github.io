@@ -3,7 +3,7 @@ const themeSlider = document.getElementById('themeSlider');
 themeSlider.addEventListener('input', () => {
     const themeValue = themeSlider.value;
     document.body.classList.remove('theme1', 'theme2', 'theme3');
-    
+
     if (themeValue === '1') {
         document.body.classList.add('theme1');
     } else if (themeValue === '2') {
@@ -12,11 +12,11 @@ themeSlider.addEventListener('input', () => {
         document.body.classList.add('theme3');
     }
 });
+
 document.body.classList.add('theme1');
 
-
-
 const display = document.getElementById('calc-display');
+const equationDisplay = document.getElementById('calc-equation');
 let currentInput = '';
 let operator = '';
 let previousInput = '';
@@ -40,9 +40,14 @@ document.querySelectorAll('.btn').forEach(button => {
 });
 
 function handleNumber(number) {
-    if (currentInput.length < 12) {  
-        currentInput += number;
+    if (currentInput.length < 12) {
+        if (currentInput === '0') {
+            currentInput = number;
+        } else {
+            currentInput += number;
+        }
         updateDisplay(currentInput);
+        updateEquationDisplay();
     }
 }
 
@@ -51,6 +56,7 @@ function handleOperator(op) {
     previousInput = currentInput;
     currentInput = '';
     operator = op;
+    updateEquationDisplay();
 }
 
 function handleDecimal() {
@@ -77,7 +83,7 @@ function calculateResult() {
         case '×':
             result = previous * current;
             break;
-        case '÷':
+        case '/':
             result = current === 0 ? 'Error' : previous / current;
             break;
         default:
@@ -87,6 +93,7 @@ function calculateResult() {
     currentInput = result.toString();
     operator = '';
     updateDisplay(currentInput);
+    equationDisplay.value += ` = ${currentInput}`;
 }
 
 function resetCalculator() {
@@ -94,13 +101,26 @@ function resetCalculator() {
     operator = '';
     previousInput = '';
     updateDisplay('0');
+    equationDisplay.value = '';
 }
 
 function deleteLast() {
+    resetEquationDisplay();
     currentInput = currentInput.slice(0, -1);
     updateDisplay(currentInput || '0');
+    updateEquationDisplay();
+}
+
+function resetEquationDisplay() {
+    equationDisplay.value = '';
 }
 
 function updateDisplay(value) {
     display.value = value;
 }
+
+function updateEquationDisplay() {
+    equationDisplay.value = previousInput + (operator ? ` ${operator} ` : '') + currentInput;
+}
+
+updateDisplay('0'); // Ensures zero is displayed at start
