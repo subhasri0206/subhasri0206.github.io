@@ -15,11 +15,8 @@
 
 <body>
     <header>
-        <nav>
-            <h1>Shopping Cart</h1>
-            <div class="cart-icon">
-                <span>Cart (<span id="cart-count">0</span>)</span>
-            </div>
+        <nav class="header">
+            <h1>Desserts</h1>
         </nav>
     </header>
 
@@ -27,22 +24,9 @@
         <div class="container">
             <!-- Product Section (Left) -->
             <div class="product-list">
-                <div class="product" data-id="1">
-                    <img src="product1.jpg" alt="Product 1">
-                    <h3>Product 1</h3>
-                    <p>$10.00</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                    <div class="quantity-control" style="display: none;">
-                        <button class="decrease-quantity">-</button>
-                        <span class="quantity">1</span>
-                        <button class="increase-quantity">+</button>
-                    </div>
-                </div>
-                <div class="product-list">
-                    <div class="product" data-id="2">
-                        <img src="product1.jpg" alt="Product 2">
-                        <h3>Product 2</h3>
-                        <p>$10.00</p>
+                <div data-id="1" class="items">
+                    <div class="product">
+                        <img src="./assets/images/waffle-image.png" alt="waffle-image">
                         <button class="add-to-cart">Add to Cart</button>
                         <div class="quantity-control" style="display: none;">
                             <button class="decrease-quantity">-</button>
@@ -50,18 +34,159 @@
                             <button class="increase-quantity">+</button>
                         </div>
                     </div>
-                    <!-- Repeat for other products -->
+                    <div class="product-content">
+                        <h5>Waffle</h5>
+                        <h3>Waffle with Berries</h3>
+                        <p>$6.50</p>
+                    </div>
                 </div>
 
-                <!-- Cart Section (Right) -->
-                <div class="cart-section">
-                    <img src="cart-empty.png" alt="Empty Cart">
-                    <p>Your added items will show here.</p>
-                    <div class="cart-items"></div>
-                    <div class="cart-summary" style="display: none;">
-                        <p>Order Total: $<span id="total-price">0</span></p>
-                        <button id="confirm-order">Confirm Order</button>
+                <div data-id="2" class="items">
+                    <div class="product">
+                        <img src="./assets/images/vanilla-image.png" alt="vanilla-image">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <div class="quantity-control" style="display: none;">
+                            <button class="decrease-quantity">-</button>
+                            <span class="quantity">1</span>
+                            <button class="increase-quantity">+</button>
+                        </div>
                     </div>
+                    <div class="product-content">
+                        <h5>Crème Brûlée</h5>
+                        <h3>Vanilla Bean Crème Brûlée</h3>
+                        <p>$7.00</p>
+                    </div>
+                </div>
+
+                <div data-id="3" class="items">
+                    <div class="product">
+                        <img src="./assets/images/macaron-image.png" alt="macaron-image">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <div class="quantity-control" style="display: none;">
+                            <button class="decrease-quantity">-</button>
+                            <span class="quantity">1</span>
+                            <button class="increase-quantity">+</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h5>Macaron</h5>
+                        <h3>Macaron Mix of Five</h3>
+                        <p>$8.00</p>
+                    </div>
+                </div>
+
+                <div data-id="4" class="items">
+                    <div class="product">
+                        <img src="./assets/images/tiramisu-image.png" alt="tiramisu-image">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <div class="quantity-control" style="display: none;">
+                            <button class="decrease-quantity">-</button>
+                            <span class="quantity">1</span>
+                            <button class="increase-quantity">+</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h5>Tiramisu</h5>
+                        <h3>Classic Tiramisu</h3>
+                        <p>$5.50</p>
+                    </div>
+                </div>
+
+                <div data-id="5" class="items">
+                    <div class="product">
+                        <img src="./assets/images/baklava-image.png" alt="baklava-image">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <div class="quantity-control" style="display: none;">
+                            <button class="decrease-quantity">-</button>
+                            <span class="quantity">1</span>
+                            <button class="increase-quantity">+</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h5>Baklava</h5>
+                        <h3>Pistachio Baklava</h3>
+                        <p>$4.00</p>
+                    </div>
+                </div>
+
+                <div data-id="6" class="items">
+                    <div class="product">
+                        <img src="./assets/images/pie-image.png" alt="pie-image">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <div class="quantity-control" style="display: none;">
+                            <button class="decrease-quantity">-</button>
+                            <span class="quantity">1</span>
+                            <button class="increase-quantity">+</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h5>Pie</h5>
+                        <h3>Lemon Meringue Pie</h3>
+                        <p>$5.00</p>
+                    </div>
+                </div>
+
+                <div data-id="7" class="items">
+                    <div class="product">
+                        <img src="./assets/images/redvelvet-image.png" alt="redvelvet-image">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <div class="quantity-control" style="display: none;">
+                            <button class="decrease-quantity">-</button>
+                            <span class="quantity">1</span>
+                            <button class="increase-quantity">+</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h5>Cake</h5>
+                        <h3>Red Velvet Cake</h3>
+                        <p>$4.50</p>
+                    </div>
+                </div>
+
+                <div data-id="8" class="items">
+                    <div class="product">
+                        <img src="./assets/images/brownie-image.png" alt="brownie-image">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <div class="quantity-control" style="display: none;">
+                            <button class="decrease-quantity">-</button>
+                            <span class="quantity">1</span>
+                            <button class="increase-quantity">+</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h5>Brownie</h5>
+                        <h3>Salted Caramel Brownie</h3>
+                        <p>$5.50</p>
+                    </div>
+                </div>
+
+                <div data-id="9" class="items">
+                    <div class="product">
+                        <img src="./assets/images/pannacotta-image.png" alt="pannacotta-image">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <div class="quantity-control" style="display: none;">
+                            <button class="decrease-quantity">-</button>
+                            <span class="quantity">1</span>
+                            <button class="increase-quantity">+</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h5>Panna Cotta</h5>
+                        <h3>Vanilla Panna Cotta</h3>
+                        <p>$6.50</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-section">
+                <h3>Your Cart</h3>
+                <div class="cart-content">
+                    <img src="assets/images/empty-icon.png" alt="Empty Cart">
+                    <p>Your added items will appear here</p>
+                </div>
+                <div class="cart-items"></div>
+                <div class="cart-summary" style="display: none;">
+                    <p>Order Total: $<span id="total-price">0</span></p>
+                    <button id="confirm-order">Confirm Order</button>
                 </div>
             </div>
     </main>

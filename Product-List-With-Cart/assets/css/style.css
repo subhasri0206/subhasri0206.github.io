@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+    --bg-color: #FCF8F6;
+    --cart-bg-color: #FFFFFF;
+    --cart-border: #AD8A85;
+    --cart-text: #260F08;
+    --h5-color: #87635A;
+    --h3-color: #260F08;
+    --p-color: #C73B0F;
+    --cart-h3-color: #C73B0F;
+    --cart-p-color: #87635A;
+    --btn-text-color: #FFFFFF;
+    --btn-bg-color: #C73B0F;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,46 +21,103 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+.header {
+    margin-left: 112px;
+    margin-top: 88px;
+    text-align: left;
+    font-family: Red Hat Text;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: left;
 }
 
 .container {
     display: flex;
-    margin: 20px;
+    margin-top: 32px;
+    margin-left: 112px;
+    margin-bottom: 88px;
+}
+
+.items {
+    width: 250px;
+    height: 347px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
 }
 
 .product-list {
     width: 70%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    row-gap: 32px;
+    column-gap: 24px;
 }
 
-.product {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-}
-
-.product img {
-    width: 100px;
-    height: 100px;
-}
-
-.add-to-cart,
-.confirm-order {
-    background-color: #28a745;
-    color: violet;
-    border: none;
-    padding: 10px;
+.add-to-cart {
+    height: 44px;
+    background-color: var(--cart-bg-color);
+    color: var(--cart-text);
+    border: 1px solid var(--cart-border);
     cursor: pointer;
+    font-family: Red Hat Text;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18.52px;
+    text-align: center;
+    padding: 12.5px 28px 12.5px 28px;
+    border-radius: 999px;
+    margin-top: -20px;
+}
+
+.product-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.product-content h5 {
+    font-family: Red Hat Text;
+    font-size: var(--font-sizetext-preset-4);
+    font-weight: 400;
+    line-height: 18.52px;
+    text-align: left;
+    margin-top: 16px;
+    color: var(--h5-color);
+}
+
+.product-content h3 {
+    font-family: Red Hat Text;
+    font-size: var(--spacing200);
+    font-weight: 600;
+    line-height: 21.17px;
+    text-align: left;
+    color: var(--h3-color);
+    margin-top: 4px;
+}
+
+.product-content p {
+    font-family: Red Hat Text;
+    font-size: var(--spacing200);
+    font-weight: 600;
+    line-height: 21.17px;
+    text-align: left;
+    color: var(--p-color);
+    margin-top: 4px;
 }
 
 .quantity-control {
@@ -52,7 +125,6 @@ header {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    /* Space between quantity and buttons */
 }
 
 .quantity-control button {
@@ -69,20 +141,66 @@ header {
 }
 
 .cart-section {
-    width: 30%;
-    padding: 10px;
-    border-left: 2px solid #ccc;
+    width: 384px;
+    height: auto;
+    background-color: var(--cart-bg-color);
+    margin-right: 112px;
+    border-radius: 12px;
+}
+
+.cart-section h3 {
+    margin-left: 24px;
+    margin-top: 24px;
+    font-family: Red Hat Text;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.75px;
+    text-align: left;
+    color: var(--cart-h3-color);
+}
+
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-content p {
+    margin-top: 16px;
+    font-family: Red Hat Text;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18.52px;
+    text-align: center;
+    color: var(--cart-p-color)
 }
 
 .cart-items {
-    margin-top: 20px;
+    margin-top: 24px;
+    margin-left: 24px;
 }
 
 .cart-summary {
-    margin-top: 20px;
+    margin-top: 24px;
+    margin-left: 24px;
+}
+
+#confirm-order {
+    padding: 16px 113.5px 16px 113.5px;
+    font-family: Red Hat Text;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21.17px;
+    text-align: left;
+    color: var(--btn-text-color);
+    background-color: var(--btn-bg-color);
+    border-radius: 999px;
+    border: none;
+    margin-top: 24px;
+    cursor: pointer;
 }
 
 .order-confirmation {
     text-align: center;
-    margin-top: 50px;
 }
