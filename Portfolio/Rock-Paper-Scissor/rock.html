@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Preview a Rock, Paper, Scissors game" />
+    <meta name="keywords" content="HTML, tags, web development, card" />
+    <meta property="og:title" content=">Rock, Paper, Scissors">
+    <meta property="og:description" content="Preview a Rock, Paper, Scissors game">
+    <link rel="icon" type="image/x-icon" href="assets/images/rock-paper-scissors.png">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>ROCK<br>PAPER<br>SCISSORS</h1>
+            <div class="score">
+                <div class="score-title">SCORE</div>
+                <div class="score-number">0</div>
+            </div>
+        </header>
+        <section class="game">
+            <button class="choice-btn" data-choice="paper">
+                <div class="choice paper">
+                    <img src="assets/images/icon-paper.png" alt="Paper" />
+                </div>
+            </button>
+            <button class="choice-btn" data-choice="scissors">
+                <div class="choice scissors">
+                    <img src="assets/images/icon-scissors.png" alt="Scissors" />
+                </div>
+            </button>
+            <button class="choice-btn" data-choice="rock">
+                <div class="choice rock">
+                    <img src="assets/images/icon-rock.png" alt="Rock" />
+                </div>
+            </button>
+        </section>
+    </div>
+
+    <section class="results hidden">
+        <h2 class="results-heading">YOU PICKED</h2>
+        <h2 class="results-heading">THE HOUSE PICKED</h2>
+        <div class="results-result"></div>
+        <div class="results-winner hidden">
+            <h3 class="results-text"></h3>
+            <button class="play-again">PLAY AGAIN</button>
+        </div>
+        <div class="results-result"></div>
+    </section>
+
+    <button class="rules-btn" tabindex="1">RULES</button>
+    <div class="modal">
+        <div class="modal-container">
+            <header class="modal-header">
+                <h2 class="modal-heading">RULES</h2>
+                <button class="close-btn">
+                    <img src="assets/images/close-btn.png" alt="Close-Button" />
+                </button>
+            </header>
+            <img src="assets/images/rules-image.png" alt="Rules-Image" class="rules-img" />
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
