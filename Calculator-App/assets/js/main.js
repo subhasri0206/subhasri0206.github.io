@@ -109,6 +109,9 @@ function deleteLast() {
     currentInput = currentInput.slice(0, -1);
     updateDisplay(currentInput || '0');
     updateEquationDisplay();
+    previousInput = '';
+    operator = '';
+    resetEquationDisplay();
 }
 
 function resetEquationDisplay() {
