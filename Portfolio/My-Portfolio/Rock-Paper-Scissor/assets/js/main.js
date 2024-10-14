@@ -1,4 +1,3 @@
-
 setTimeout(() => {
     document.body.classList.remove("preload");
   }, 500);
@@ -96,6 +95,9 @@ setTimeout(() => {
   
   function keepScore(point) {
     score += point;
+    if (score < 0) {
+      score = 0;
+    }
     scoreNumber.innerText = score;
   }
 
