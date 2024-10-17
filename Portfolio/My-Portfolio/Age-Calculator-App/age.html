@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Preview a Age Calculator App" />
+    <meta name="keywords" content="HTML, tags, web development, card" />
+    <meta property="og:title" content=">Age Calculator App">
+    <meta property="og:description" content="Preview a Age Calculator App">
+    <link rel="icon" type="image/x-icon" href="assets/images/calculator.png">
+    <title>Age Calculator App</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="age-calculator">
+        <div class="input-section">
+            <div class="input-column">
+                <label for="day">DAY</label>
+                <input type="text" id="day" placeholder="DD">
+                <span id="day-error" class="error-message"></span>
+            </div>
+            <div class="input-column">
+                <label for="month">MONTH</label>
+                <input type="text" id="month" placeholder="MM">
+                <span id="month-error" class="error-message"></span>
+            </div>
+            <div class="input-column">
+                <label for="year">YEAR</label>
+                <input type="text" id="year" placeholder="YYYY">
+                <span id="year-error" class="error-message"></span>
+            </div>
+        </div>
+        <div class="input-btn">
+            <hr>
+            <button><img src="assets/images/arrow-image.png" id="calculate-btn" alt="calculate-btn"></button>
+        </div>
+        <div class="result-section">
+            <p><span id="years">--</span> years</p>
+            <p><span id="months">--</span> months</p>
+            <p><span id="days">--</span> days</p>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
