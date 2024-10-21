@@ -43,6 +43,7 @@ body {
 }
 
 .input-column {
+    height: 101px;
     margin-right: 32px;
 }
 
