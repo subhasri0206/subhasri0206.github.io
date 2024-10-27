@@ -141,6 +141,10 @@ button:hover {
     color: var(--highlight-text-color);
 }
 
+.hr-line {
+    display: none;
+}
+
 @media (max-width: 905px) {
     .age-calculator {
         background-color: var(--container-bg-color);
@@ -153,7 +157,7 @@ button:hover {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     .input-column {
@@ -210,6 +214,10 @@ button:hover {
         color: var(--border-color);
     }
 
+    .hr-line {
+        display: block;
+    }
+
     .input-btn {
         display: flex;
         flex-direction: row;
@@ -226,8 +234,8 @@ button:hover {
         border-radius: 50%;
         cursor: pointer;
         transition: 0.4s ease-in;
-        margin-top: 32px;
-        margin-bottom: 32px;
+        margin-top: 24px;
+        margin-bottom: 24px;
     }
 
     button img {
