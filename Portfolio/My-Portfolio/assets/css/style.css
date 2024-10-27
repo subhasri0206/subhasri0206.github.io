@@ -12,18 +12,6 @@
     scroll-behavior: smooth;
 }
 
-[data-theme="light"] {
-    background-color: var(--background-color-light);
-
-    .header-nav {
-        background-color: var(--background-color-light);
-    }
-}
-
-[data-theme="dark"] {
-    background-color: var(--background-color-dark);
-}
-
 body {
     background-color: rgba(0, 0, 0, 1);
     margin: 0;
@@ -69,6 +57,7 @@ a {
 
 .nav-link:hover {
     color: var(--yellow);
+    transition: 0.5s ease;
 }
 
 .hamburger {
@@ -133,6 +122,11 @@ a {
     color: rgba(0, 0, 0, 1);
 }
 
+.intro-btn-hire:hover {
+    box-shadow: 0px 0px 16px 0px var(--yellow);
+    transition: 0.5s ease;
+}
+
 .intro-btn-work {
     border: 1px solid rgba(143, 143, 143, 1);
     border-radius: 32px;
@@ -146,14 +140,25 @@ a {
     color: var(--text-color);
 }
 
+.intro-btn-work:hover {
+    box-shadow: 0px 0px 16px 0px var(--content-color);
+    transition: 0.5s ease;
+}
+
+.about {
+    background-image: url(../images/about-bg.png);
+    background-position: 55% 40px;
+    background-repeat: no-repeat;
+}
+
 .about-content {
     display: flex;
     justify-content: center;
 }
 
 .about-image {
-    width: 445px;
-    height: 637.38px;
+    width: auto;
+    height: 500px;
     margin-right: 15px;
 }
 
@@ -165,7 +170,6 @@ a {
     width: 665px;
     height: 637.38px;
     margin-left: 33px;
-    margin-bottom: 120px;
 }
 
 .about-title {
@@ -249,11 +253,19 @@ a {
     color: rgba(0, 0, 0, 1);
 }
 
+.about-download:hover {
+    box-shadow: 0px 0px 16px 0px var(--yellow);
+    transition: 0.5s ease;
+}
+
 .resume {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url(../images/resume-bg.png);
+    background-position: center 90px;
+    background-repeat: no-repeat;
 }
 
 .resume-title {
@@ -349,6 +361,17 @@ a {
     color: rgba(0, 0, 0, 1);
 }
 
+.resume-download:hover {
+    box-shadow: 0px 0px 16px 0px var(--yellow);
+    transition: 0.5s ease;
+}
+
+.interests {
+    background-image: url(../images/services-bg.png);
+    background-position: center 40px;
+    background-repeat: no-repeat;
+}
+
 .interests-title {
     margin: 120px auto 24px auto;
     font-family: Poppins;
@@ -373,6 +396,9 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 1180px;
 }
 
 .interest {
@@ -404,6 +430,12 @@ hr {
     border: 1px solid var(--yellow);
     margin-top: 14.94px;
     margin-bottom: 65px;
+}
+
+.skills {
+    background-image: url(../images/skills-bg.png);
+    background-position: center 40px;
+    background-repeat: no-repeat;
 }
 
 .skills-title {
@@ -510,6 +542,12 @@ hr {
     width: 10%;
 }
 
+.projects {
+    background-image: url(../images/projects-bg.png);
+    background-position: center 40px;
+    background-repeat: no-repeat;
+}
+
 .projects-title {
     font-family: Poppins;
     font-size: 50px;
@@ -562,6 +600,11 @@ hr {
     border-radius: 3px 0 0 3px;
 }
 
+.prev:hover,
+.next:hover {
+    color: var(--yellow);
+}
+
 .dot-container {
     display: flex;
     flex-direction: row;
@@ -604,6 +647,12 @@ hr {
     to {
         opacity: 1
     }
+}
+
+.footer {
+    background-image: url(../images/contact-bg.png);
+    background-position: center 40px;
+    background-repeat: no-repeat;
 }
 
 .footer-title {
@@ -691,6 +740,30 @@ hr {
 }
 
 @media only screen and (max-width: 1383px) {
+    .about {
+        background-image: none;
+    }
+
+    .resume {
+        background-image: none;
+    }
+
+    .interests {
+        background-image: none;
+    }
+
+    .skills {
+        background-image: none;
+    }
+
+    .projects {
+        background-image: none;
+    }
+
+    .footer {
+        background-image: none;
+    }
+
     .resume-para {
         max-width: 650px;
     }
@@ -825,17 +898,33 @@ hr {
     }
 
     .header-intro {
-        max-width: 273px;
+        height: 100vh;
+        width: 100%;
         text-align: center;
         margin: 33px auto 96px auto;
+        background-image: url(../images/profile-image.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .intro-para {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 25.2px;
+        letter-spacing: 3px;
+        padding-top: 200px;
     }
 
     .intro-title {
         font-size: 36px;
         line-height: 48px;
         letter-spacing: 0.08em;
+        text-align: center;
+        max-width: 185px;
+        margin: auto;
         margin-top: 20.8px;
-        margin-bottom: 21px;
+        margin-bottom: 24px;
     }
 
     .intro-highlight {
