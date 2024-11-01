@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --bg-color: #202733;
+    --container-bg: #313A48;
+    --neon-green-color: #53FFAA;
+    --light-text: #CEE3E9;
+    --line-color: #4F5D74;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 540px;
+    z-index: 2;
+}
+
+.advice-box {
+    background-color: var(--container-bg);
+    padding: 48px 48px 0px 48px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    color: var(--light-text);
+    box-shadow: 30px 50px 80px 0px #0000001A;
+}
+
+.advice-id {
+    color: var(--neon-green-color);
+    font-family: Manrope;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 17.76px;
+    letter-spacing: 4.085713863372803px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.advice-text {
+    font-family: Manrope;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 38.25px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 79px;
+}
+
+.divider img {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+hr {
+    background-color: var(--line-color);
+    width: 100%;
+}
+
+#new-advice-btn {
+    background-color: var(--neon-green-color);
+    border: none;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: -33px;
+    z-index: 1;
+}
+
+#new-advice-btn:hover {
+    box-shadow: 0px 0px 40px 0px #53FFAA;
+    transition: 0.7s ease;
+}
+
+@media only screen and (max-width: 735px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 343px;
+        z-index: 2;
+    }
+
+    .advice-box {
+        padding: 40px 24px 0px 24px;
+        border-radius: 10px;
+    }
+
+    .advice-id {
+        font-family: Manrope;
+        font-size: 11px;
+        font-weight: 800;
+        line-height: 15.03px;
+        letter-spacing: 3.4571425914764404px;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .advice-text {
+        font-family: Manrope;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 32.78px;
+        letter-spacing: -0.2571428716182709px;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin-bottom: 64px;
+    }
+}
