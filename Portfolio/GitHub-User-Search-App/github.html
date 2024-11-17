@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Preview a GitHub User Search App" />
+    <meta name="keywords" content="HTML, tags, web development, card" />
+    <meta property="og:title" content="GitHub User Search App">
+    <meta property="og:description" content="Preview a GitHub User Search App">
+    <link rel="icon" type="image/x-icon" href="assets/images/github.png">
+    <title>GitHub User Search App</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="darkmode">
+    <main class="user-search-container">
+        <div class="content-wrapper">
+            <header class="header">
+                <h1 class="app-title">devfinder</h1>
+                <div class="toggle-container">
+                    <button type="button" id="theme-switch">
+                        <img class="icon sun-icon" src="./assets/images/sun-icon.png" alt="sun-icon">
+                        <img class="icon moon-icon" src="./assets/images/moon-icon.png" alt="moon-icon">
+                    </button>
+                </div>
+            </header>
+
+            <form class="search-bar" role="search" onsubmit="fetchGitHubUser(event)">
+                <div class="search-input-wrapper">
+                    <img src="./assets/images/search-icon.png" alt="" class="search-icon" />
+                    <label for="github-username" class="visually-hidden">Search GitHub username</label>
+                    <input type="text" id="github-username" class="search-input" placeholder="Search GitHub username…"
+                        aria-label="Search GitHub username" required />
+                </div>
+                <button type="submit" class="search-button">Search</button>
+            </form>
+
+            <section class="user-profile">
+                <div class="profile-header">
+                    <div class="profile-info">
+                        <div class="profile-main">
+                            <div class="profile-details">
+                                <img id="profile-image" src="" alt="Profile" class="profile-image" />
+                                <div class="user-info">
+                                    <h2 id="user-name" class="user-name">User Name</h2>
+                                    <p id="user-handle" class="user-handle">@username</p>
+                                    <p id="user-bio" class="user-bio">User bio will appear here</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="join-date">
+                            <p id="join-date" class="join-date-text">Joined Date</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3 class="stat-label">Repos</h3>
+                        <p id="repos" class="stat-value">0</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-label">Followers</h3>
+                        <p id="followers" class="stat-value">0</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-label">Following</h3>
+                        <p id="following" class="stat-value">0</p>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-group">
+                        <div class="icons">
+                            <img class="location-icon" src="./assets/images/location.png">
+                            <p id="location" class="location">Location</p>
+                        </div>
+                        <div class="icons">
+                            <img class="website-icon" src="./assets/images/link.png">
+                            <a id="website" href="#" class="website" target="_blank">Website</a>
+                        </div>
+                    </div>
+                    <div class="social-info">
+                        <div class="icons">
+                            <img class="twitter-icon" src="./assets/images/twitter.png">
+                            <p id="twitter-handle" class="twitter-handle">Twitter</p>
+                        </div>
+                        <div class="icons">
+                            <img class="github-icon" src="./assets/images/account.png">
+                            <a id="github-link" class="github-handle" href="#" target="_blank">@github</a>
+                        </div>
+                    </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
