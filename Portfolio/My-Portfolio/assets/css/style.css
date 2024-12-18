@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --yellow: rgba(204, 145, 28, 1);
+    --yellow: rgba(255, 189, 57, 1);
     --text-color: rgba(255, 255, 255, 1);
     --content-color: rgba(153, 153, 153, 1);
     --background-color-light: #FAF9FB;
@@ -226,7 +226,6 @@ a {
     text-align: left;
     color: var(--text-color);
     margin-top: 32px;
-    margin-bottom: 24px;
 }
 
 .about-projects span {
@@ -251,6 +250,8 @@ a {
     line-height: 18px;
     text-align: center;
     color: rgba(0, 0, 0, 1);
+    margin-top: -200px;
+    margin-bottom: 144px;
 }
 
 .about-download:hover {
@@ -576,6 +577,7 @@ hr {
     max-width: 1000px;
     position: relative;
     margin: auto;
+    z-index: 1;
 }
 
 .mySlides {
@@ -744,6 +746,11 @@ hr {
         background-image: none;
     }
 
+    .about-download {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
     .resume {
         background-image: none;
     }
@@ -859,6 +866,7 @@ hr {
     .header-nav {
         display: flex;
         justify-content: center;
+        z-index: 999;
     }
 
     .nav-list {
@@ -976,6 +984,7 @@ hr {
         font-size: 12px;
         margin-bottom: 0;
         letter-spacing: 2px;
+        margin-top: 77px;
     }
 
     .resume {
