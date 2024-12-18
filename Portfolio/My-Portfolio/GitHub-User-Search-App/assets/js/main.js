@@ -1,84 +1,108 @@
-document.querySelector('.theme-toggle').addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
-    const themeText = document.querySelector('.theme-toggle span');
-    themeText.textContent = document.body.classList.contains('light-mode') ? 'DARK' : 'LIGHT';
-});
-
-
-
 async function fetchGitHubUser(event) {
+
     event.preventDefault();
     const username = document.getElementById('github-username').value;
     const url = `https://api.github.com/users/${username}`;
 
+    const resultsElement = document.getElementById('search-results');
+    resultsElement.textContent = ''; // Clear previous message
+    resultsElement.style.display = 'none'; // Hide no results message initially
+
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            throw new Error('User not found');
+            displayNoResults();
+            return;
         }
 
         const data = await response.json();
-        document.getElementById('profile-image').src = data.avatar_url || '';
+        document.getElementById('profile-image').src = data.avatar_url || 'blank-profile.png';
         document.getElementById('user-name').textContent = data.name || 'No Name';
         document.getElementById('user-handle').textContent = `@${data.login}`;
         document.getElementById('user-bio').textContent = data.bio || 'This profile has no bio';
-        document.getElementById('join-date').textContent = `Joined ${new Date(data.created_at).toLocaleDateString()}`;
+        
+        function formatJoinDate(dateString) {
+            const date = new Date(dateString);
+            const options = { day: '2-digit', month: 'short', year: 'numeric' };
+            return date.toLocaleDateString('en-GB', options);
+        }
+        document.getElementById('join-date').textContent = `Joined ${formatJoinDate(data.created_at)}`;
+
+        // Handle availability of information
+        const locationElement = document.getElementById('location');
+        locationElement.textContent = data.location || 'Not Available';
+        locationElement.classList.toggle('dimmed', !data.location);
+
+        const websiteElement = document.getElementById('website');
+        websiteElement.textContent = data.blog || 'Not Available';
+        websiteElement.href = data.blog || '#';
+        websiteElement.classList.toggle('dimmed', !data.blog);
+
+        const twitterElement = document.getElementById('twitter-handle');
+        twitterElement.textContent = data.twitter_username ? `@${data.twitter_username}` : 'Not Available';
+        twitterElement.classList.toggle('dimmed', !data.twitter_username);
+
         document.getElementById('repos').textContent = data.public_repos;
         document.getElementById('followers').textContent = data.followers;
         document.getElementById('following').textContent = data.following;
-        document.getElementById('location').textContent = data.location || 'Not Available';
-        document.getElementById('website').textContent = data.blog || 'Not Available';
-        document.getElementById('website').href = data.blog || '#';
-        document.getElementById('twitter-handle').textContent = data.twitter_username ? `@${data.twitter_username}` : 'Not Available';
-        document.getElementById('github-link').textContent = `@${data.login}`;
-        document.getElementById('github-link').href = data.html_url;
+
+        const githubLinkElement = document.getElementById('github-link');
+        githubLinkElement.textContent = `@${data.login}`;
+        githubLinkElement.href = data.html_url;
     } catch (error) {
-        alert(error.message);
+        displayNoResults();
+        console.error(error.message);
     }
+}
+
+function displayNoResults() {
+    const resultsElement = document.getElementById('search-results');
+    resultsElement.textContent = 'No results';
+    resultsElement.style.color = 'red';
+    resultsElement.style.fontWeight = 'bold';
+    resultsElement.style.display = 'block'; // Ensure message is visible
 }
 
 
 
 
-document.getElementById("theme-switch").addEventListener("click", function() {
-    const logo = document.getElementById("logo");
-    const skillsImage  = document.getElementById("skills-image");
-    const membershipImage = document.getElementById("membership-image");
-    const sessionImage = document.getElementById("session-image");
-    const ideaIcon1 = document.getElementById("idea-icon1");
-    const ideaIcon2 = document.getElementById("idea-icon2");
-    const ideaIcon3 = document.getElementById("idea-icon3");
-    const serviceS = document.getElementById("services");
-    const logoBottom = document.getElementById("logo-bottom");
-    const ytIcon = document.getElementById("yt-icon");
-    const instaIcon = document.getElementById("insta-icon");
-    const linkedinIcon = document.getElementById("linkedin-icon");
-    // Check if the body has the 'darkmode' class
-    if (document.body.classList.contains("darkmode")) {
-        // If it's in dark mode, remove 'darkmode' and add 'lightmode'
-        document.body.classList.remove("darkmode");
-        document.body.classList.add("lightmode");
-        logo.src = logo.getAttribute("data-light");
-        skillsImage.src = skillsImage.getAttribute("data-light");
-        membershipImage.src = membershipImage.getAttribute("data-light");
-        sessionImage.src = sessionImage.getAttribute("data-light");
-        ideaIcon1.src = ideaIcon1.getAttribute("data-light");
-        ideaIcon2.src = ideaIcon2.getAttribute("data-light");
-        ideaIcon3.src = ideaIcon3.getAttribute("data-light");
-        serviceS.src = serviceS.getAttribute("data-light");
-        logoBottom.src = logoBottom.getAttribute("data-light");
-        ytIcon.src = ytIcon.getAttribute("data-light");
-        instaIcon.src = instaIcon.getAttribute("data-light");
-        linkedinIcon.src = linkedinIcon.getAttribute("data-light");
-        // Change all images for light mode
+const themeSwitchBtn = document.getElementById('theme-switch');
+const bodyElement = document.body;
+const sunIcon = themeSwitchBtn.querySelector('.sun-icon');
+const moonIcon = themeSwitchBtn.querySelector('.moon-icon');
+const locationLogo = document.getElementById("location-logo");
+const linkLogo = document.getElementById("link-logo");
+const twitterLogo = document.getElementById("twitter-logo");
+const githubLogo = document.getElementById("github-logo");
+
+// Initialize the theme based on the current class of body
+if (bodyElement.classList.contains('darkmode')) {
+    sunIcon.style.display = 'none';
+    moonIcon.style.display = 'inline';
+} else {
+    sunIcon.style.display = 'inline';
+    moonIcon.style.display = 'none';
+}
+
+// Toggle theme on button click
+themeSwitchBtn.addEventListener('click', () => {
+    bodyElement.classList.toggle('darkmode');
+
+    if (bodyElement.classList.contains('darkmode')) {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'inline';
+        bodyElement.classList.remove('lightmode');
+        locationLogo.src = locationLogo.getAttribute("data-light");
+        linkLogo.src = linkLogo.getAttribute("data-light");
+        twitterLogo.src = twitterLogo.getAttribute("data-light");
+        githubLogo.src = githubLogo.getAttribute("data-light");
         themeImages.forEach(image => {
             image.src = image.getAttribute('data-light');
         });
     } else {
-        // If it's in light mode, switch back to dark mode
-        document.body.classList.remove("lightmode");
-        document.body.classList.add("darkmode");
-        // Change all images back to dark mode
+        sunIcon.style.display = 'inline';
+        moonIcon.style.display = 'none';
+        bodyElement.classList.add('lightmode');
         themeImages.forEach(image => {
             image.src = image.getAttribute('src');
         });

@@ -13,15 +13,17 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body class="darkmode">
+<body>
     <main class="user-search-container">
         <div class="content-wrapper">
             <header class="header">
                 <h1 class="app-title">devfinder</h1>
                 <div class="toggle-container">
                     <button type="button" id="theme-switch">
-                        <img class="icon sun-icon" src="./assets/images/sun-icon.png" alt="sun-icon">
-                        <img class="icon moon-icon" src="./assets/images/moon-icon.png" alt="moon-icon">
+                        <img id="logo" data-light="./assets/images/sun-icon.png" class="icon sun-icon"
+                            src="./assets/images/sun-icon.png" alt="sun-icon">
+                        <img id="logo" data-light="./assets/images/moon-icon.png" class="icon moon-icon"
+                            src="./assets/images/moon-icon.png" alt="moon-icon">
                     </button>
                 </div>
             </header>
@@ -33,6 +35,7 @@
                     <input type="text" id="github-username" class="search-input" placeholder="Search GitHub username…"
                         aria-label="Search GitHub username" required />
                 </div>
+                <div id="search-results"></div>
                 <button type="submit" class="search-button">Search</button>
             </form>
 
@@ -41,16 +44,19 @@
                     <div class="profile-info">
                         <div class="profile-main">
                             <div class="profile-details">
-                                <img id="profile-image" src="" alt="Profile" class="profile-image" />
+                                <img id="profile-image" src="./assets/images/blank-profile.png" alt="Profile"
+                                    class="profile-image" />
                                 <div class="user-info">
                                     <h2 id="user-name" class="user-name">User Name</h2>
                                     <p id="user-handle" class="user-handle">@username</p>
-                                    <p id="user-bio" class="user-bio">User bio will appear here</p>
                                 </div>
                             </div>
+                            <div class="join-date">
+                                <p id="join-date" class="join-date-text">Joined Date</p>
+                            </div>
                         </div>
-                        <div class="join-date">
-                            <p id="join-date" class="join-date-text">Joined Date</p>
+                        <div class="user-bio">
+                            <p id="user-bio">User bio will appear here</p>
                         </div>
                     </div>
                 </div>
@@ -73,24 +79,29 @@
                 <div class="contact-info">
                     <div class="contact-group">
                         <div class="icons">
-                            <img class="location-icon" src="./assets/images/location.png">
+                            <img id="location-logo" data-light="./assets/images/location-light.png"
+                                class="location-icon" data-theme src="./assets/images/location.png">
                             <p id="location" class="location">Location</p>
                         </div>
                         <div class="icons">
-                            <img class="website-icon" src="./assets/images/link.png">
+                            <img id="link-logo" data-light="./assets/images/link-light.png" class="website-icon"
+                                data-theme src="./assets/images/link.png">
                             <a id="website" href="#" class="website" target="_blank">Website</a>
                         </div>
                     </div>
                     <div class="social-info">
                         <div class="icons">
-                            <img class="twitter-icon" src="./assets/images/twitter.png">
+                            <img id="twitter-logo" data-light="./assets/images/twitter-light.png" class="twitter-icon"
+                                data-theme src="./assets/images/twitter.png">
                             <p id="twitter-handle" class="twitter-handle">Twitter</p>
                         </div>
                         <div class="icons">
-                            <img class="github-icon" src="./assets/images/account.png">
+                            <img id="github-logo" data-light="./assets/images/account-light.png" class="github-icon"
+                                data-theme src="./assets/images/account.png">
                             <a id="github-link" class="github-handle" href="#" target="_blank">@github</a>
                         </div>
                     </div>
+                </div>
             </section>
         </div>
     </main>
