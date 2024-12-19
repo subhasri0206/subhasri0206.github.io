@@ -18,43 +18,45 @@
 <body class="darkmode">
     <div class="container">
         <header>
-            <div>
-                <img id="logo" class="theme-image" src="./assets/images/vertacx-logo.png"
-                    data-light="./assets/images/vertacx-logo-light.png" alt="Vertacx-logo-Dark">
-            </div>
-            <div class="nav-list">
-                <a href="javascript:void(0)">Home</a>
-                <a href="#why-vertacx">Why Vertacx</a>
-                <a href="#our-programs">Our Programs</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#skills-section">About Us</a>
-            </div>
-            <div class="toggle-container">
-                <button type="button" id="theme-switch">
-                    <img class="icon sun-icon" src="./assets/images/sun-icon.png" alt="sun-icon">
-                    <img class="icon moon-icon" src="./assets/images/moon-icon.png" alt="moon-icon">
-                </button>
-                <label for="popup-form" class="curriculum-btn">Contact Us</label>
-            </div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div id="navbar">
+                <div>
+                    <img id="logo" class="theme-image" src="./assets/images/vertacx-logo.png"
+                        data-light="./assets/images/vertacx-logo-light.png" alt="Vertacx-logo-Dark">
+                </div>
+                <div id="nav-list" class="nav-list">
+                    <a href="#hero">Home</a>
+                    <a href="#why-vertacx">Why Vertacx</a>
+                    <a href="#our-programs">Our Programs</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#skills-section">About Us</a>
+                </div>
+                <div class="toggle-container">
+                    <button class="theme-switch" type=" button" id="theme-switch">
+                        <img class="icon sun-icon" src="./assets/images/sun-icon.png" alt="sun-icon">
+                        <img class="icon moon-icon" src="./assets/images/moon-icon.png" alt="moon-icon">
+                    </button>
+                    <label for="popup-form" class="curriculum-btn contact-btn">Contact Us</label>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
             <input type="checkbox" id="popup-form" class="popup-checkbox" />
             <div class="form-container pop-up-content">
                 <label for="popup-form" class="close-popup-button">&times;</label>
-                <form id="popup-form-content">
+                <form id="popup-form-content" novalidate>
                     <div class="form-item">
                         <div class="form-group group-col">
                             <div class="form-group">
-                                <label for="interest">WE ARE INTERESTED IN</label>
+                                <label class="margin" for="interest">WE ARE INTERESTED IN</label>
                                 <select id="interest" required>
                                     <option value="">Select an option</option>
                                     <option value="Option 1">FrontEnd Development</option>
                                     <option value="Option 2">Backend Development</option>
-                                    <option value="Option 2">AI/ML Development</option>
-                                    <option value="Option 2">LowCode Development</option>
+                                    <option value="Option 3">AI/ML Development</option>
+                                    <option value="Option 4">LowCode Development</option>
                                 </select>
                                 <span class="error-message" id="interestError"></span>
                             </div>
@@ -64,7 +66,7 @@
                                     <option value="">Select an option</option>
                                     <option value="Option 1">Part Time</option>
                                     <option value="Option 2">Full Time</option>
-                                    <option value="Option 2">Permanent</option>
+                                    <option value="Option 3">Permanent</option>
                                 </select>
                                 <span class="error-message" id="weAreError"></span>
                             </div>
@@ -76,7 +78,7 @@
                                 <option value="">Select an option</option>
                                 <option value="Stage 1">Beginner</option>
                                 <option value="Stage 2">Intermediate</option>
-                                <option value="Stage 2">Expert</option>
+                                <option value="Stage 3">Expert</option>
                             </select>
                             <span class="error-message" id="stageError"></span>
                         </div>
@@ -103,8 +105,7 @@
                         </div>
 
                         <div class="form-group group-col group-margin">
-                            <p>This form collects your contact information so that we can correspond with you. Check
-                                out
+                            <p>This form collects your contact information so that we can correspond with you. Check out
                                 our privacy policy to protect and manage your data.</p>
                             <button type="submit">Submit ➔</button>
                         </div>
@@ -113,7 +114,7 @@
             </div>
         </header>
 
-        <section class="hero">
+        <section id="hero" class="hero">
             <h1>Transform Your Future with Industry-ready Skills</h1>
             <p>At Vertacx, we deliver personalized, actionable learning in a real-world software company to develop
                 industry-ready software engineers.</p>
@@ -154,49 +155,70 @@
 
         <section id="our-programs">
             <h2>Our Programs</h2>
-            <div class="program-cards">
-                <div class="card">
-                    <div>
-                        <img id="idea-icon1" class="theme-image" src="assets/images/idea-image.png"
-                            data-light="assets/images/idea-image-light.png" alt="Lightbulb-icon">
+            <div class="program-cards-container">
+                <div class="program-cards">
+                    <div class="card">
+                        <div>
+                            <img id="idea-icon2" class="theme-image" src="assets/images/idea-image.png"
+                                data-light="assets/images/idea-image-light.png" alt="Lightbulb-icon">
+                        </div>
+                        <h3 class="card-heading">Lorem Ipsum1</h3>
+                        <p class="card-content">Makers Nest simulates a full-time job by immersing participants in an
+                            office
+                            environment,
+                            allowing trainees to experience workplace realities firsthand while undergoing training in
+                            frontend or backend engineering.</p>
+                        <p class="highlight">Designed for freshers and graduates.</p>
                     </div>
-                    <h3 class="card-heading">Makers Nest</h3>
-                    <p class="card-content">Makers Nest simulates a full-time job by immersing participants in an office
-                        environment,
-                        allowing trainees to experience workplace realities firsthand while undergoing training in
-                        frontend or backend engineering.</p>
-                    <p class="highlight">Designed for freshers and graduates.</p>
-                </div>
 
-                <div class="card">
-                    <div>
-                        <img id="idea-icon2" class="theme-image" src="assets/images/idea-image.png"
-                            data-light="assets/images/idea-image-light.png" alt="Lightbulb-icon">
+                    <div class="card">
+                        <div>
+                            <img id="idea-icon3" class="theme-image" src="assets/images/idea-image.png"
+                                data-light="assets/images/idea-image-light.png" alt="Lightbulb-icon">
+                        </div>
+                        <h3 class="card-heading">Lorem Ipsum2</h3>
+                        <p class="card-content">Makers Nest simulates a full-time job by immersing participants in an
+                            office
+                            environment,
+                            allowing trainees to experience workplace realities firsthand while undergoing training in
+                            frontend or backend engineering.</p>
+                        <p class="highlight">Designed for freshers and graduates.</p>
                     </div>
-                    <h3 class="card-heading">Lorem Ipsum</h3>
-                    <p class="card-content">Makers Nest simulates a full-time job by immersing participants in an office
-                        environment,
-                        allowing trainees to experience workplace realities firsthand while undergoing training in
-                        frontend or backend engineering.</p>
-                    <p class="highlight">Designed for freshers and graduates.</p>
-                </div>
 
-                <div class="card">
-                    <div>
-                        <img id="idea-icon3" class="theme-image" src="assets/images/idea-image.png"
-                            data-light="assets/images/idea-image-light.png" alt="Lightbulb-icon">
+                    <div class="card">
+                        <div>
+                            <img id="idea-icon3" class="theme-image" src="assets/images/idea-image.png"
+                                data-light="assets/images/idea-image-light.png" alt="Lightbulb-icon">
+                        </div>
+                        <h3 class="card-heading">Lorem Ipsum3</h3>
+                        <p class="card-content">Makers Nest simulates a full-time job by immersing participants in an
+                            office
+                            environment,
+                            allowing trainees to experience workplace realities firsthand while undergoing training in
+                            frontend or backend engineering.</p>
+                        <p class="highlight">Designed for freshers and graduates.</p>
                     </div>
-                    <h3 class="card-heading">Lorem Ipsum</h3>
-                    <p class="card-content">Makers Nest simulates a full-time job by immersing participants in an office
-                        environment,
-                        allowing trainees to experience workplace realities firsthand while undergoing training in
-                        frontend or backend engineering.</p>
-                    <p class="highlight">Designed for freshers and graduates.</p>
+
+                    <div class="card">
+                        <div>
+                            <img id="idea-icon3" class="theme-image" src="assets/images/idea-image.png"
+                                data-light="assets/images/idea-image-light.png" alt="Lightbulb-icon">
+                        </div>
+                        <h3 class="card-heading">Lorem Ipsum4</h3>
+                        <p class="card-content">Makers Nest simulates a full-time job by immersing participants in an
+                            office
+                            environment,
+                            allowing trainees to experience workplace realities firsthand while undergoing training in
+                            frontend or backend engineering.</p>
+                        <p class="highlight">Designed for freshers and graduates.</p>
+                    </div>
                 </div>
             </div>
             <div class="controls">
                 <p class="control" onclick="activateControl(this)"></p>
                 <p class="control" onclick="activateControl(this)"></p>
+                <p class="control mobile-ctrl" onclick="activateControl(this)"></p>
+                <p class="control mobile-ctrl" onclick="activateControl(this)"></p>
             </div>
         </section>
 
@@ -207,7 +229,9 @@
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <h3>1. Career Assessments</h3>
-                        <span class="arrow">&#9654;</span>
+                        <div class="arrow-btn">
+                            <span class="arrow">&#9654;</span>
+                        </div>
                     </div>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab est modi ex eos ipsam expedita,
@@ -220,7 +244,9 @@
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <h3>2. Program Onboarding</h3>
-                        <span class="arrow">&#9654;</span>
+                        <div class="arrow-btn">
+                            <span class="arrow">&#9654;</span>
+                        </div>
                     </div>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab est modi ex eos ipsam expedita,
@@ -233,7 +259,9 @@
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <h3>3. Learning Sprint and Retrospective</h3>
-                        <span class="arrow">&#9654;</span>
+                        <div class="arrow-btn">
+                            <span class="arrow">&#9654;</span>
+                        </div>
                     </div>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab est modi ex eos ipsam expedita,
@@ -246,7 +274,9 @@
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <h3>4. Capstone Project</h3>
-                        <span class="arrow">&#9654;</span>
+                        <div class="arrow-btn">
+                            <span class="arrow">&#9654;</span>
+                        </div>
                     </div>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab est modi ex eos ipsam expedita,
@@ -259,7 +289,9 @@
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <h3>5. Internship</h3>
-                        <span class="arrow">&#9654;</span>
+                        <div class="arrow-btn">
+                            <span class="arrow">&#9654;</span>
+                        </div>
                     </div>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab est modi ex eos ipsam expedita,
