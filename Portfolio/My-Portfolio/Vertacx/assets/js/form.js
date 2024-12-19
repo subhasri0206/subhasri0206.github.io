@@ -1,27 +1,41 @@
-// Wait for the DOM to fully load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const popupCheckbox = document.getElementById('popup-form');
     const closePopupButton = document.querySelector('.close-popup-button');
     const formContainer = document.querySelector('.form-container');
+    const overlay = document.createElement('div');
+    const bodyContent = document.body; // Target the entire body for the blur effect
 
-   // Close popup when the close button is clicked
-   closeButtons.forEach(button => {
-    button.addEventListener("click", function () {
-        const popup = this.closest(".popup");
-        popup.style.display = "none";
+    // Add overlay to the body
+    overlay.classList.add('overlay');
+    document.body.appendChild(overlay);
+
+    // Show popup and apply blur
+    popupCheckbox.addEventListener('change', function () {
+        if (popupCheckbox.checked) {
+            formContainer.style.display = 'block';
+            overlay.style.display = 'block';
+            bodyContent.classList.add('blurred-background');
+        } else {
+            closePopup();
+        }
     });
-});
 
-    // Listen for clicks on the close button to close the pop-up
+    // Close popup and remove blur
     closePopupButton.addEventListener('click', closePopup);
 
-    // Optional: Close pop-up when clicking outside of the form
-    window.addEventListener('click', function(event) {
+    window.addEventListener('click', function (event) {
         if (!formContainer.contains(event.target) && popupCheckbox.checked) {
             closePopup();
         }
     });
+
+    function closePopup() {
+        formContainer.style.display = 'none';
+        overlay.style.display = 'none';
+        bodyContent.classList.remove('blurred-background');
+    }
 });
+
 
 
 // Form submission validation
