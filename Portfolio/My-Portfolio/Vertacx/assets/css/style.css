@@ -431,6 +431,10 @@ header {
     margin: 61.82px 101.03px 24px 101.02px;
 }
 
+#idea-icon4 {
+    margin: 61.82px 101.03px 24px 101.02px;
+}
+
 .card-heading {
     font-family: Poppins;
     font-size: 24px;
@@ -1298,6 +1302,10 @@ button {
         margin: 46.38px 79.95px 33.37px 80px;
     }
 
+    #idea-icon4 {
+        margin: 46.38px 79.95px 33.37px 80px;
+    }
+
     .card-heading {
         font-size: 20px;
         line-height: 26px;
@@ -2066,6 +2074,10 @@ button {
     }
 
     #idea-icon3 {
+        margin: 46.38px 79.95px 33.37px 80px;
+    }
+
+    #idea-icon4 {
         margin: 46.38px 79.95px 33.37px 80px;
     }
 
