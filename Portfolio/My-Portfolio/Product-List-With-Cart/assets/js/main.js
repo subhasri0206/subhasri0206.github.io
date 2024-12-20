@@ -43,6 +43,16 @@ function renderProducts() {
   });
 }
 
+document.querySelectorAll('.product').forEach(product => {
+  const button = product.querySelector('.add-to-cart');
+  const productImage = product.querySelector('.product-image');
+
+  button.addEventListener('click', () => {
+    productImage.classList.add('in-cart');
+  });
+});
+
+
 // Function to add product to the cart and switch to quantity control view
 function addToCart(productId) {
   const product = products.find(p => p.id === productId);
@@ -101,7 +111,7 @@ function decreaseQuantity(productId) {
 function updateQuantityInUI(productId, quantity) {
   const productDiv = document.querySelector(`.items[data-id="${productId}"]`);
   const quantitySpan = productDiv.querySelector('.quantity');
-  quantitySpan.textContent = quantity; // Update the displayed quantity
+  quantitySpan.textContent = quantity; // Update the displayed 
 }
 
 // Function to reset the "Add to Cart" button when item is removed from the cart
@@ -116,30 +126,83 @@ function resetAddToCartButton(productId) {
 }
 
 // Function to update the cart display with items and prices
+// function updateCartDisplay() {
+//   const cartContent = document.querySelector('.cart-items');
+//   const cartSummary = document.querySelector('.cart-summary');
+//   const totalPrice = document.getElementById('total-price');
+//   const emptyCartContent = document.querySelector('.cart-content');
+//   let total = 0;
+
+//   // Clear current cart display
+//   cartContent.innerHTML = '';
+
+//   cart.forEach(item => {
+//       total += item.price * item.quantity;
+//       // Create cart item display
+//       const cartItemDiv = document.createElement('div');
+//       cartItemDiv.classList.add('cart-item');
+//       cartItemDiv.innerHTML = `
+//           <p>${item.name} </p> <span> ${item.quantity}x </span> <h4>@ $${item.price}</h4> <h5>$${(item.price * item.quantity).toFixed(2)}</h5>
+//           <hr>
+//       `;
+
+//       cartContent.appendChild(cartItemDiv);
+//   });
+
+//   totalPrice.textContent = total.toFixed(2);
+
+//   // Show cart summary and hide empty cart message if there are items
+//   if (cart.length > 0) {
+//     cartSummary.style.display = 'block'; // Show the cart summary
+//     emptyCartContent.style.display = 'none'; // Hide the empty cart content
+//   } 
+//   else {
+//     cartSummary.style.display = 'none'; // Hide the cart summary
+//     emptyCartContent.style.display = 'flex'; // Show the empty cart content
+//   }
+// }
 function updateCartDisplay() {
   const cartContent = document.querySelector('.cart-items');
   const cartSummary = document.querySelector('.cart-summary');
   const totalPrice = document.getElementById('total-price');
   const emptyCartContent = document.querySelector('.cart-content');
+  const cartHeading = document.querySelector('.cart-section h3');
   let total = 0;
+  let itemCount = 0;
 
   // Clear current cart display
   cartContent.innerHTML = '';
 
   cart.forEach(item => {
       total += item.price * item.quantity;
-      // Create cart item display
+      itemCount += item.quantity;
+      // Create cart item display with styled quantities, prices, totals, and a close button
       const cartItemDiv = document.createElement('div');
       cartItemDiv.classList.add('cart-item');
       cartItemDiv.innerHTML = `
-          <p>${item.name} </p> <span> ${item.quantity}x </span> <h4>@ $${item.price}</h4> <h5>$${(item.price * item.quantity).toFixed(2)}</h5>
-          <hr>
+      <div class=cartItem>
+        <div class="cart-item-details">
+          <span class="cart-item-name">${item.name}</span>
+          <div class="inner-items">
+            <span class="cart-item-quantity">${item.quantity}x</span>
+            <span class="cart-item-price">@ $${item.price.toFixed(2)}</span>
+            <span class="cart-item-total">$${(item.price * item.quantity).toFixed(2)}</span>
+          </div>
+        </div>
+        <div>
+          <button class="remove-item" onclick="removeFromCart(${item.id})">&times;</button>
+        </div>
+      </div>
+      <hr>
       `;
 
       cartContent.appendChild(cartItemDiv);
   });
 
   totalPrice.textContent = total.toFixed(2);
+
+  // Update the cart heading with item count
+  cartHeading.textContent = `Your Cart (${itemCount})`;
 
   // Show cart summary and hide empty cart message if there are items
   if (cart.length > 0) {
@@ -149,7 +212,36 @@ function updateCartDisplay() {
   else {
     cartSummary.style.display = 'none'; // Hide the cart summary
     emptyCartContent.style.display = 'flex'; // Show the empty cart content
+    cartHeading.textContent = 'Your Cart (0)'; // Reset heading when empty
   }
+}
+
+// Function to remove an item from the cart
+function removeFromCart(productId) {
+  // Remove item from cart
+  cart = cart.filter(item => item.id !== productId); 
+
+  // Reset the product view in the product list
+  const productDiv = document.querySelector(`.items[data-id="${productId}"]`);
+  if (productDiv) {
+    const addToCartButton = productDiv.querySelector('.add-to-cart');
+    const quantityControl = productDiv.querySelector('.quantity-control');
+
+    if (addToCartButton && quantityControl) {
+      addToCartButton.style.display = 'block'; // Show "Add to Cart" button
+      quantityControl.style.display = 'none'; // Hide quantity controls
+
+    }
+  }
+
+  // Refresh cart display
+  updateCartDisplay();
+}
+
+// Ensure cart heading starts with (0) initially
+const initialCartHeading = document.querySelector('.cart-section h3');
+if (initialCartHeading) {
+  initialCartHeading.textContent = 'Your Cart (0)';
 }
 
 // Function to update quantity in the cart
@@ -212,31 +304,65 @@ function confirmOrder() {
   
   // Update confirmed items and total
   cart.forEach(item => {
-      const itemDiv = document.createElement('div');
-      itemDiv.className = 'item-row';
-      
-      const name = document.createElement('span');
-      name.className = 'item-name';
-      name.textContent = `${item.name}`;
-      
-      const quantity = document.createElement('p');
-      quantity.className = 'item-quantity';
-      quantity.textContent = `${item.quantity}x`;
+        // Create an image element for the product
+        const image = document.createElement('img');
+        image.className = 'product-images';
+        image.src = `${item.image}`; // Assuming item.image contains the URL of the product image
+        image.alt = `${item.name}`;
 
-      const price = document.createElement('h5');
-      price.className = 'item-price';
-      price.textContent = `@ $${item.price.toFixed(2)}`;
+        // Create a container for the product image
+        const imageContainer = document.createElement('div');
+        imageContainer.className = 'image-container';
+        imageContainer.appendChild(image);
 
-      const total = document.createElement('h4');
-      total.className = 'item-total';
-      total.textContent = `$${(item.price * item.quantity).toFixed(2)}`;
-      
-      itemDiv.append(name, quantity, price, total);
-      confirmedItemsDiv.appendChild(itemDiv);
-      // Add a horizontal line after each item
-      const hr = document.createElement('hr');
-      hr.className = 'item-divider';
-      confirmedItemsDiv.appendChild(hr)
+        // Create a container for the product name
+        const name = document.createElement('span');
+        name.className = 'item-name';
+        name.textContent = `${item.name}`;
+
+        const nameAndDetailsContainer = document.createElement('div');
+        nameAndDetailsContainer.className = 'name-and-details'; // Flex direction set to row for name and details
+
+        // Create a container for price and quantity
+        const quantity = document.createElement('p');
+        quantity.className = 'item-quantity';
+        quantity.textContent = `${item.quantity}x`;
+
+        const price = document.createElement('h5');
+        price.className = 'item-price';
+        price.textContent = `@ $${item.price.toFixed(2)}`;
+
+        const detailsContainer = document.createElement('div');
+        detailsContainer.className = 'item-details';
+        detailsContainer.append(quantity, price);
+
+        // Append name and details into the same row container
+        nameAndDetailsContainer.appendChild(name);
+        nameAndDetailsContainer.appendChild(detailsContainer);
+
+        // Create a container for the total price
+        const total = document.createElement('h4');
+        total.className = 'item-total';
+        total.textContent = `$${(item.price * item.quantity).toFixed(2)}`;
+
+        const totalContainer = document.createElement('div');
+        totalContainer.className = 'item-total-container';
+        totalContainer.appendChild(total);
+
+        // Create the main container for the order details
+        const orderDetailsContainer = document.createElement('div');
+        orderDetailsContainer.className = 'order-details';
+        orderDetailsContainer.appendChild(imageContainer); // Add the image container
+        orderDetailsContainer.appendChild(nameAndDetailsContainer); // Add the name and details container
+        orderDetailsContainer.appendChild(totalContainer); // Add the total container
+
+        // Append the main order details container to the confirmed items div
+        confirmedItemsDiv.appendChild(orderDetailsContainer);
+
+        // Add a horizontal line after each item
+        const hr = document.createElement('hr');
+        hr.className = 'item-divider';
+        confirmedItemsDiv.appendChild(hr);
   });
 
   const total = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
