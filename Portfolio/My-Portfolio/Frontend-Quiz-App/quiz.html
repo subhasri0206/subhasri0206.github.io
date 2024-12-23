@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Quiz App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-switch">
+                <img src="assets/images/sun-icon-light.png" alt="sun-icon" class="sun-icon">
+                <label class="switch">
+                    <input type="checkbox" id="theme-switch">
+                    <span class="slider round"></span>
+                </label>
+                <img src="assets/images/moon-icon-light.png" alt="moon-icon" class="moon-icon">
+            </div>
+            <h1>Welcome to the <span class="highlight">Frontend Quiz!</span></h1>
+        </div>
+        <div class="content">
+            <p class="start-game">Start Game</p>
+            <div class="card">
+                <img class="man-image" src="assets/images/man-image.png" alt="man-image">
+                <button class="text" id="accessibility-btn">Accessibility</button>
+            </div>
+        </div>
+        <div class="quiz hide">
+            <main class="question-container">
+                <div class="question-content">
+                    <div class="question-text">
+                        <div class="question-header">
+                            <p id="question-number">Question 1 of 5</p>
+                            <h2 id="question-title">Question goes here</h2>
+                        </div>
+                        <div class="progress-bar">
+                            <div id="progress-indicator" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="right-container">
+                        <form id="answer-options" class="answer-options">
+                            <!-- Options are dynamically populated -->
+                        </form>
+                        <button class="submit-button" type="submit" disabled>Submit Answer</button>
+                        <button id="next-button" type="button" disabled>Next Question</button>
+                    </div>
+                    <div id="error-feedback" class="feedback"></div>
+                </div>
+            </main>
+        </div>
+        <div class="end-screen hide">
+            <div>
+                <h1 class="heading">Quiz Completed</h1>
+                <h2 class="sub-heading">You Scored...</h2>
+            </div>
+            <div>
+                <div class="score">
+                    <div class="card-container">
+                        <img class="man-image" src="assets/images/man-image.png" alt="man-image">
+                        <button class="text" id="accessibility-btn">Accessibility</button>
+                    </div>
+                    <div class="score-container">
+                        <span class="final-score"></span>
+                        <span class="total-score"></span>
+                    </div>
+                </div>
+                <button class="btn restart">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

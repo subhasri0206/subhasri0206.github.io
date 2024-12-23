@@ -1,0 +1,776 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+    --bg-color-light: #f4f6fa;
+    --man-bg-color: #f6e7ff;
+    --toggle-bg-color: #a729f5;
+    --heading-text-color: #313e51;
+    --start-game-text: #626c7f;
+    --start-btn-bg: #ffffff;
+    --start-btn-shadow: #8fa0c124;
+    --start-btn-text-color: #313e51;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color-light);
+    background-image: url(../images/curve-top-light.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../images/curve-bottom-light.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 46px;
+}
+
+.header-switch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 97px;
+    margin-right: 143px;
+}
+
+.sun-icon,
+.moon-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 2px;
+}
+
+.sun-icon {
+    margin-right: 16px;
+}
+
+.moon-icon {
+    margin-left: 16px;
+}
+
+.header h1 {
+    font-family: Rubik;
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 74px;
+    text-align: left;
+    color: var(--heading-text-color);
+    max-width: 453px;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.highlight {
+    font-family: Rubik;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 64px;
+    text-align: left;
+    color: var(--heading-text-color);
+    max-width: 453px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 60%;
+    max-width: 564px;
+}
+
+.start-game {
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    color: var(--start-game-text);
+    margin-bottom: 44px;
+}
+
+.card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 564px;
+    color: var(--start-btn-bg);
+    background-color: var(--start-btn-bg);
+    box-shadow: 0px 16px 40px 0px var(--start-btn-shadow);
+    padding: 20px;
+    border-radius: 24px;
+}
+
+.man-image {
+    background-color: var(--man-bg-color);
+    width: 56px;
+    height: 56px;
+    padding: 8px;
+    border-radius: 8px;
+    margin-right: 32px;
+}
+
+.card button {
+    font-family: Rubik;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    color: var(--start-btn-text-color);
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 54px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--toggle-bg-color);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: var(--toggle-bg-color);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--toggle-bg-color);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 999px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.hide {
+    display: none !important;
+}
+
+.quiz {
+    margin: 0px;
+}
+
+.question-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.question-text {
+    max-width: 465px;
+    margin-left: 140px;
+}
+
+#question-number {
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--start-game-text);
+    margin-top: 85px;
+}
+
+#question-title {
+    font-family: Rubik;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 43.2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--heading-text-color);
+    margin-top: 27px;
+}
+
+.right-container {
+    margin-right: 100px;
+    margin-top: 85px;
+}
+
+.answer-option {
+    display: flex;
+    align-items: center;
+    border: 3px solid transparent;
+    margin-bottom: 24px;
+    cursor: pointer;
+    background-color: var(--start-btn-bg);
+    border-radius: 24px;
+    width: 764px;
+}
+
+.option-indicator {
+    font-family: Rubik;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-right: 32px;
+    transition: background-color 0.3s ease;
+}
+
+.option-text {
+    font-family: Rubik;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--heading-text-color);
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.feedback-icon {
+    margin-left: auto;
+    margin-right: 31px;
+    width: 20px;
+    height: 20px;
+}
+
+.feedback-icon.hide {
+    display: none;
+}
+
+.submit-button,
+#next-button {
+    width: 764px;
+    margin-left: 20px;
+    padding: 32px;
+    font-family: Rubik;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--start-btn-bg);
+    background-color: var(--toggle-bg-color);
+    box-shadow: 0px 16px 40px 0px #8fa0c124;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.submit-button:hover {
+    background-color: rgba(167, 41, 245, 0.5);
+}
+
+#error-feedback {
+    font-family: Rubik;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #ee5454;
+    margin-top: 34px;
+}
+
+.end-screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.heading {
+    font-family: Rubik;
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 64px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--heading-text-color);
+    margin-top: 135px;
+    margin-left: 140px;
+}
+
+.sub-heading {
+    font-family: Rubik;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 64px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--heading-text-color);
+    margin-top: 8px;
+    margin-left: 140px;
+}
+
+.score {
+    background-color: var(--start-btn-bg);
+    box-shadow: 0px 16px 40px 0px #8fa0c124;
+    margin-right: 140px;
+    margin-top: 135px;
+    width: 564px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 564px;
+    color: var(--start-btn-bg);
+    border-radius: 24px;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0px;
+    margin-top: 48px;
+    margin-bottom: 40px;
+}
+
+.card-container button {
+    font-family: Rubik;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    color: var(--start-btn-text-color);
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.score-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.final-score {
+    font-family: Rubik;
+    font-size: 144px;
+    font-weight: 500;
+    line-height: 144px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--heading-text-color);
+}
+
+.total-score {
+    font-family: Rubik;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--start-game-text);
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+.restart {
+    width: 564px;
+    margin-top: 32px;
+    padding: 32px;
+    font-family: Rubik;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--start-btn-bg);
+    background-color: var(--toggle-bg-color);
+    box-shadow: 0px 16px 40px 0px #8fa0c124;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: var(--start-btn-bg);
+    border-radius: 999px;
+    padding: 4px;
+    margin-top: 164px;
+    overflow: hidden;
+    height: 16px;
+    position: relative;
+}
+
+#progress-indicator {
+    height: 100%;
+    width: 0%;
+    background-color: var(--toggle-bg-color);
+    transition: width 0.3s ease;
+    border-radius: 104px;
+}
+
+@media (max-width: 1500px) {
+    .container {
+        background-image: none;
+    }
+
+    .header-switch {
+        margin-top: 54px;
+        margin-right: 64px;
+    }
+
+    .header h1 {
+        max-width: 453px;
+        margin-top: 301px;
+        margin-left: 64px;
+    }
+
+    .highlight {
+        max-width: 453px;
+    }
+
+    .content {
+        margin-top: 0%;
+        margin-left: 64px;
+        max-width: 564px;
+    }
+
+    .start-game {
+        text-align: left;
+        margin-bottom: 44px;
+    }
+
+    .hide {
+        display: none !important;
+    }
+
+    .quiz {
+        margin: 0px;
+    }
+
+    .question-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .question-text {
+        margin-top: 49px;
+        max-width: 640px;
+        margin-left: 64px;
+    }
+
+    .right-container {
+        margin-right: 64px;
+        margin-top: 64px;
+        margin-left: 40px;
+    }
+
+    .answer-option {
+        width: 640px;
+    }
+
+    .submit-button,
+    #next-button {
+        width: 640px;
+    }
+
+    .end-screen {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .heading {
+        margin-top: 175px;
+        margin-left: 64px;
+    }
+
+    .sub-heading {
+        margin-top: 8px;
+        margin-left: 64px;
+    }
+
+    .score {
+        margin-right: 64px;
+        margin-top: 64px;
+        margin-left: 64px;
+        width: 640px;
+    }
+
+    .card-container {
+        max-width: 640px;
+        margin-top: 48px;
+        margin-bottom: 40px;
+    }
+
+    .restart {
+        width: 640px;
+        margin-top: 32px;
+        margin-left: 64px;
+    }
+
+    .progress-bar {
+        margin-top: 64px;
+    }
+}
+
+@media (max-width: 755px) {
+    .container {
+        background-image: none;
+    }
+
+    .header-switch {
+        margin-top: 26px;
+        margin-right: 2px;
+    }
+
+    .header h1 {
+        max-width: 327px;
+        margin-top: 104px;
+        margin-left: 24px;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .highlight {
+        max-width: 453px;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .content {
+        margin-top: 0%;
+        margin-left: 24px;
+        max-width: 327px;
+    }
+
+    .start-game {
+        text-align: left;
+        margin-bottom: 44px;
+    }
+
+    .card {
+        padding: 23px;
+    }
+
+    .man-image {
+        width: 40px;
+        height: 40px;
+        margin-right: 16px;
+    }
+
+    .card button {
+        font-size: 18px;
+    }
+
+    .hide {
+        display: none !important;
+    }
+
+    .quiz {
+        margin: 0px;
+    }
+
+    .question-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #question-number{
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    #question-title{
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .question-text {
+        margin-top: 49px;
+        max-width: 50%;
+        margin-left: 24px;
+    }
+
+    .right-container {
+        margin-right: 24px;
+        margin-top: 40px;
+        margin-left: 10px;
+    }
+
+    .answer-option {
+        border-radius: 3px;
+        width: 50%;
+    }
+
+    .option-indicator {
+        font-size: 18px;
+        line-height: 18px;
+        width: 40px;
+        height: 40px;
+        margin: 12px 16px 12px 12px;
+    }
+    
+    .option-text{
+        font-size: 18px;
+        line-height: 18px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .submit-button,
+    #next-button {
+        width: 50%;
+        font-size: 18px;
+        line-height: 18px;
+        padding: 19px;
+    }
+
+    .feedback-icon {
+        margin-left: auto;
+        margin-right: 16px;
+    }
+
+    .end-screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .heading {
+        font-size: 40px;
+        line-height: 40px;
+        margin-top: 155px;
+        margin-left: 24px;
+    }
+    
+    .sub-heading {
+        font-size: 40px;
+        line-height: 40px;
+        margin-top: 8px;
+        margin-left: 24px;
+    }
+    
+    .score {
+        margin-right: 24px;
+        margin-left: 24px;
+        margin-top: 40px;
+        width: 327px;
+        border-radius: 12px;
+    }
+    
+    .card-container {
+        max-width: 327px;
+        padding: 0px;
+        margin-top: 32px;
+        margin-bottom: 16px;
+    }
+    
+    .card-container button {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    
+    .final-score {
+        font-size: 88px;
+        line-height: 88px;
+    }
+    
+    .total-score {
+        font-size: 18px;
+        line-height: 18px;
+        margin-top: 16px;
+        margin-bottom: 32px;
+    }
+    
+    .restart {
+        width: 327px;
+        margin-top: 12px;
+        padding: 12px;
+        font-size: 18px;
+        line-height: 18px;
+        border-radius: 12px;
+        margin-left: 24px;
+    }
+
+    .progress-bar {
+        width: 50%;
+        margin-top: 24px;
+    }
+}
